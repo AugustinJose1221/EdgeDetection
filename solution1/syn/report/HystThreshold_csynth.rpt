@@ -1,0 +1,183 @@
+
+
+================================================================
+== Vivado HLS Report for 'HystThreshold'
+================================================================
+* Date:           Wed Jan  6 15:36:50 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        EdgeDetection
+* Solution:       solution1
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     5.383|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  264193|  264193|  264193|  264193|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+        |             |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |  264192|  264192|       516|          -|          -|   512|    no    |
+        | + Loop 1.1  |     513|     513|         3|          1|          1|   512|    yes   |
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT |
++-----------------+---------+-------+-------+------+
+|DSP              |        -|      -|      -|     -|
+|Expression       |        -|      -|      0|   150|
+|FIFO             |        -|      -|      -|     -|
+|Instance         |        -|      -|      -|     -|
+|Memory           |        -|      -|      -|     -|
+|Multiplexer      |        -|      -|      -|   117|
+|Register         |        -|      -|     59|     -|
++-----------------+---------+-------+-------+------+
+|Total            |        0|      0|     59|   267|
++-----------------+---------+-------+-------+------+
+|Available        |       40|     40|  16000|  8000|
++-----------------+---------+-------+-------+------+
+|Utilization (%)  |        0|      0|   ~0  |     3|
++-----------------+---------+-------+-------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |xi_fu_165_p2                      |     +    |      0|  0|  17|          10|           1|
+    |yi_fu_153_p2                      |     +    |      0|  0|  17|          10|           1|
+    |ap_block_state4_pp0_stage0_iter1  |    and   |      0|  0|   8|           1|           1|
+    |ap_block_state5_pp0_stage0_iter2  |    and   |      0|  0|   8|           1|           1|
+    |tmp_54_i_i_i_fu_159_p2            |   icmp   |      0|  0|  13|          10|          11|
+    |tmp_57_i_i_i_fu_171_p2            |   icmp   |      0|  0|  11|           8|           8|
+    |tmp_58_i_i_i_fu_176_p2            |   icmp   |      0|  0|  11|           8|           8|
+    |tmp_i_i_i_fu_147_p2               |   icmp   |      0|  0|  13|          10|          11|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   8|           1|           1|
+    |ap_block_state1                   |    or    |      0|  0|   8|           1|           1|
+    |tmp_fu_194_p2                     |    or    |      0|  0|   8|           1|           1|
+    |pix_hyst_1_i_i_i_fu_198_p3        |  select  |      0|  0|   2|           1|           2|
+    |pix_hyst_i_i_i_cast_fu_186_p3     |  select  |      0|  0|   2|           1|           2|
+    |ap_enable_pp0                     |    xor   |      0|  0|   8|           1|           2|
+    |ap_enable_reg_pp0_iter1           |    xor   |      0|  0|   8|           2|           1|
+    |not_tmp_57_i_i_i_fu_181_p2        |    xor   |      0|  0|   8|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0| 150|          67|          54|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  27|          5|    1|          5|
+    |ap_done                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |fifo5_blk_n              |   9|          2|    1|          2|
+    |fifo6_blk_n              |   9|          2|    1|          2|
+    |hist_hthr_blk_n          |   9|          2|    1|          2|
+    |hist_lthr_blk_n          |   9|          2|    1|          2|
+    |real_start               |   9|          2|    1|          2|
+    |xi_i_i_i_reg_136         |   9|          2|   10|         20|
+    |yi_i_i_i_reg_125         |   9|          2|   10|         20|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 117|         25|   29|         61|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------+----+----+-----+-----------+
+    |                Name                | FF | LUT| Bits| Const Bits|
+    +------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                           |   4|   0|    4|          0|
+    |ap_done_reg                         |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2             |   1|   0|    1|          0|
+    |hist_hthr_read_reg_211              |   8|   0|    8|          0|
+    |hist_lthr_read_reg_216              |   8|   0|    8|          0|
+    |start_once_reg                      |   1|   0|    1|          0|
+    |tmp_54_i_i_i_reg_230                |   1|   0|    1|          0|
+    |tmp_54_i_i_i_reg_230_pp0_iter1_reg  |   1|   0|    1|          0|
+    |tmp_57_i_i_i_reg_239                |   1|   0|    1|          0|
+    |tmp_58_i_i_i_reg_245                |   1|   0|    1|          0|
+    |xi_i_i_i_reg_136                    |  10|   0|   10|          0|
+    |yi_i_i_i_reg_125                    |  10|   0|   10|          0|
+    |yi_reg_225                          |  10|   0|   10|          0|
+    +------------------------------------+----+----+-----+-----------+
+    |Total                               |  59|   0|   59|          0|
+    +------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+---------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-------------------+-----+-----+------------+---------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs | HystThreshold | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs | HystThreshold | return value |
+|ap_start           |  in |    1| ap_ctrl_hs | HystThreshold | return value |
+|start_full_n       |  in |    1| ap_ctrl_hs | HystThreshold | return value |
+|ap_done            | out |    1| ap_ctrl_hs | HystThreshold | return value |
+|ap_continue        |  in |    1| ap_ctrl_hs | HystThreshold | return value |
+|ap_idle            | out |    1| ap_ctrl_hs | HystThreshold | return value |
+|ap_ready           | out |    1| ap_ctrl_hs | HystThreshold | return value |
+|start_out          | out |    1| ap_ctrl_hs | HystThreshold | return value |
+|start_write        | out |    1| ap_ctrl_hs | HystThreshold | return value |
+|hist_hthr_dout     |  in |    8|   ap_fifo  |   hist_hthr   |    pointer   |
+|hist_hthr_empty_n  |  in |    1|   ap_fifo  |   hist_hthr   |    pointer   |
+|hist_hthr_read     | out |    1|   ap_fifo  |   hist_hthr   |    pointer   |
+|hist_lthr_dout     |  in |    8|   ap_fifo  |   hist_lthr   |    pointer   |
+|hist_lthr_empty_n  |  in |    1|   ap_fifo  |   hist_lthr   |    pointer   |
+|hist_lthr_read     | out |    1|   ap_fifo  |   hist_lthr   |    pointer   |
+|fifo5_dout         |  in |    8|   ap_fifo  |     fifo5     |    pointer   |
+|fifo5_empty_n      |  in |    1|   ap_fifo  |     fifo5     |    pointer   |
+|fifo5_read         | out |    1|   ap_fifo  |     fifo5     |    pointer   |
+|fifo6_din          | out |    8|   ap_fifo  |     fifo6     |    pointer   |
+|fifo6_full_n       |  in |    1|   ap_fifo  |     fifo6     |    pointer   |
+|fifo6_write        | out |    1|   ap_fifo  |     fifo6     |    pointer   |
++-------------------+-----+-----+------------+---------------+--------------+
+

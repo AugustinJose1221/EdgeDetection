@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="canny_edge_detection.wdb" id="1">
+         <top_modules>
+            <top_module name="apa_canny_edge_detection_top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0ns"></ZoomStartTime>
+      <ZoomEndTime time="2000ns"></ZoomEndTime>
+      <Cursor1Time time="0ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="257"></NameColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="AESL_inst_canny_edge_detection_group">
+      <obj_property name="label">AESL_inst_canny_edge_detection</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/canny_edge_detection_1_1_U0_activity">
+         <obj_property name="ElementShortName">canny_edge_detection_1_1_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">canny_edge_detection_1_1_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/AXIS2GrayArray76_U0_activity">
+         <obj_property name="ElementShortName">AXIS2GrayArray76_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">AXIS2GrayArray76_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/GaussianBlur_U0_activity">
+         <obj_property name="ElementShortName">GaussianBlur_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">GaussianBlur_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/Sobel_512u_512u_U0_activity">
+         <obj_property name="ElementShortName">Sobel_512u_512u_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">Sobel_512u_512u_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/NonMaxSuppression_U0_activity">
+         <obj_property name="ElementShortName">NonMaxSuppression_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">NonMaxSuppression_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/ZeroPadding_U0_activity">
+         <obj_property name="ElementShortName">ZeroPadding_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">ZeroPadding_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/HystThreshold_U0_activity">
+         <obj_property name="ElementShortName">HystThreshold_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">HystThreshold_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/HystThresholdComp_U0_activity">
+         <obj_property name="ElementShortName">HystThresholdComp_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">HystThresholdComp_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="protoinst" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GrayArray2AXIS_U0/GrayArray2AXIS_U0_activity">
+         <obj_property name="ElementShortName">GrayArray2AXIS_U0_activity</obj_property>
+         <obj_property name="ObjectShortName">GrayArray2AXIS_U0_activity</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="canny_edge_detection_1_1_U0_group">
+         <obj_property name="label">canny_edge_detection_1_1_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="canny_edge_detection_1_1_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+         <wvobject type="group" fp_name="canny_edge_detection_1_1_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="canny_edge_detection_1_1_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="hist_hthr_out_group">
+               <obj_property name="label">hist_hthr_out(hist_hthr_c1_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/hist_hthr_out_blk_n">
+                  <obj_property name="ElementShortName">hist_hthr_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/hist_hthr_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/hist_hthr_out_full_n">
+                  <obj_property name="ElementShortName">hist_hthr_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/hist_hthr_out_write">
+                  <obj_property name="ElementShortName">hist_hthr_out_write</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="hist_lthr_out_group">
+               <obj_property name="label">hist_lthr_out(hist_lthr_c2_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/hist_lthr_out_blk_n">
+                  <obj_property name="ElementShortName">hist_lthr_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/hist_lthr_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/hist_lthr_out_full_n">
+                  <obj_property name="ElementShortName">hist_lthr_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/canny_edge_detection_1_1_U0/hist_lthr_out_write">
+                  <obj_property name="ElementShortName">hist_lthr_out_write</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="AXIS2GrayArray76_U0_group">
+         <obj_property name="label">AXIS2GrayArray76_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="AXIS2GrayArray76_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="hist_hthr_group">
+               <obj_property name="label">hist_hthr(hist_hthr_c1_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_hthr_blk_n">
+                  <obj_property name="ElementShortName">hist_hthr_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_hthr_dout">
+                  <obj_property name="ElementShortName">hist_hthr_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_hthr_empty_n">
+                  <obj_property name="ElementShortName">hist_hthr_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_hthr_read">
+                  <obj_property name="ElementShortName">hist_hthr_read</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="hist_lthr_group">
+               <obj_property name="label">hist_lthr(hist_lthr_c2_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_lthr_blk_n">
+                  <obj_property name="ElementShortName">hist_lthr_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_lthr_dout">
+                  <obj_property name="ElementShortName">hist_lthr_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_lthr_empty_n">
+                  <obj_property name="ElementShortName">hist_lthr_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_lthr_read">
+                  <obj_property name="ElementShortName">hist_lthr_read</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="AXIS2GrayArray76_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="AXIS2GrayArray76_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="hist_hthr_out_group">
+               <obj_property name="label">hist_hthr_out(hist_hthr_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_hthr_out_blk_n">
+                  <obj_property name="ElementShortName">hist_hthr_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_hthr_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_hthr_out_full_n">
+                  <obj_property name="ElementShortName">hist_hthr_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_hthr_out_write">
+                  <obj_property name="ElementShortName">hist_hthr_out_write</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="hist_lthr_out_group">
+               <obj_property name="label">hist_lthr_out(hist_lthr_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_lthr_out_blk_n">
+                  <obj_property name="ElementShortName">hist_lthr_out_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_out_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_lthr_out_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_lthr_out_full_n">
+                  <obj_property name="ElementShortName">hist_lthr_out_full_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_out_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/hist_lthr_out_write">
+                  <obj_property name="ElementShortName">hist_lthr_out_write</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_out_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="fifo1_group">
+               <obj_property name="label">fifo1(fifo1_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/fifo1_blk_n">
+                  <obj_property name="ElementShortName">fifo1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/fifo1_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/fifo1_full_n">
+                  <obj_property name="ElementShortName">fifo1_full_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo1_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/AXIS2GrayArray76_U0/fifo1_write">
+                  <obj_property name="ElementShortName">fifo1_write</obj_property>
+                  <obj_property name="ObjectShortName">fifo1_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="GaussianBlur_U0_group">
+         <obj_property name="label">GaussianBlur_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="GaussianBlur_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo1_group">
+               <obj_property name="label">fifo1(fifo1_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/fifo1_blk_n">
+                  <obj_property name="ElementShortName">fifo1_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo1_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/fifo1_dout">
+                  <obj_property name="ElementShortName">fifo1_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">fifo1_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/fifo1_empty_n">
+                  <obj_property name="ElementShortName">fifo1_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo1_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/fifo1_read">
+                  <obj_property name="ElementShortName">fifo1_read</obj_property>
+                  <obj_property name="ObjectShortName">fifo1_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="GaussianBlur_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="GaussianBlur_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo2_group">
+               <obj_property name="label">fifo2(fifo2_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/fifo2_blk_n">
+                  <obj_property name="ElementShortName">fifo2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/fifo2_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/fifo2_full_n">
+                  <obj_property name="ElementShortName">fifo2_full_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo2_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GaussianBlur_U0/fifo2_write">
+                  <obj_property name="ElementShortName">fifo2_write</obj_property>
+                  <obj_property name="ObjectShortName">fifo2_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="Sobel_512u_512u_U0_group">
+         <obj_property name="label">Sobel_512u_512u_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="Sobel_512u_512u_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo2_group">
+               <obj_property name="label">fifo2(fifo2_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo2_blk_n">
+                  <obj_property name="ElementShortName">fifo2_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo2_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo2_dout">
+                  <obj_property name="ElementShortName">fifo2_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">fifo2_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo2_empty_n">
+                  <obj_property name="ElementShortName">fifo2_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo2_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo2_read">
+                  <obj_property name="ElementShortName">fifo2_read</obj_property>
+                  <obj_property name="ObjectShortName">fifo2_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Sobel_512u_512u_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="Sobel_512u_512u_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo3_value_group">
+               <obj_property name="label">fifo3_value(fifo3_value_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo3_value_blk_n">
+                  <obj_property name="ElementShortName">fifo3_value_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_value_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo3_value_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo3_value_full_n">
+                  <obj_property name="ElementShortName">fifo3_value_full_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_value_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo3_value_write">
+                  <obj_property name="ElementShortName">fifo3_value_write</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_value_write</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="fifo3_grad_group">
+               <obj_property name="label">fifo3_grad(fifo3_grad_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo3_grad_blk_n">
+                  <obj_property name="ElementShortName">fifo3_grad_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_grad_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo3_grad_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo3_grad_full_n">
+                  <obj_property name="ElementShortName">fifo3_grad_full_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_grad_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/Sobel_512u_512u_U0/fifo3_grad_write">
+                  <obj_property name="ElementShortName">fifo3_grad_write</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_grad_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="NonMaxSuppression_U0_group">
+         <obj_property name="label">NonMaxSuppression_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="NonMaxSuppression_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo3_value_group">
+               <obj_property name="label">fifo3_value(fifo3_value_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo3_value_blk_n">
+                  <obj_property name="ElementShortName">fifo3_value_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_value_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo3_value_dout">
+                  <obj_property name="ElementShortName">fifo3_value_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_value_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo3_value_empty_n">
+                  <obj_property name="ElementShortName">fifo3_value_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_value_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo3_value_read">
+                  <obj_property name="ElementShortName">fifo3_value_read</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_value_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="fifo3_grad_group">
+               <obj_property name="label">fifo3_grad(fifo3_grad_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo3_grad_blk_n">
+                  <obj_property name="ElementShortName">fifo3_grad_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_grad_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo3_grad_dout">
+                  <obj_property name="ElementShortName">fifo3_grad_dout[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_grad_dout[1:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo3_grad_empty_n">
+                  <obj_property name="ElementShortName">fifo3_grad_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_grad_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo3_grad_read">
+                  <obj_property name="ElementShortName">fifo3_grad_read</obj_property>
+                  <obj_property name="ObjectShortName">fifo3_grad_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="NonMaxSuppression_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="NonMaxSuppression_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo4_group">
+               <obj_property name="label">fifo4(fifo4_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo4_blk_n">
+                  <obj_property name="ElementShortName">fifo4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo4_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo4_full_n">
+                  <obj_property name="ElementShortName">fifo4_full_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo4_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/NonMaxSuppression_U0/fifo4_write">
+                  <obj_property name="ElementShortName">fifo4_write</obj_property>
+                  <obj_property name="ObjectShortName">fifo4_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="ZeroPadding_U0_group">
+         <obj_property name="label">ZeroPadding_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="ZeroPadding_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo4_group">
+               <obj_property name="label">fifo4(fifo4_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/fifo4_blk_n">
+                  <obj_property name="ElementShortName">fifo4_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo4_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/fifo4_dout">
+                  <obj_property name="ElementShortName">fifo4_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">fifo4_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/fifo4_empty_n">
+                  <obj_property name="ElementShortName">fifo4_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo4_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/fifo4_read">
+                  <obj_property name="ElementShortName">fifo4_read</obj_property>
+                  <obj_property name="ObjectShortName">fifo4_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="ZeroPadding_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="ZeroPadding_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo5_group">
+               <obj_property name="label">fifo5(fifo5_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/fifo5_blk_n">
+                  <obj_property name="ElementShortName">fifo5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/fifo5_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/fifo5_full_n">
+                  <obj_property name="ElementShortName">fifo5_full_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo5_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/ZeroPadding_U0/fifo5_write">
+                  <obj_property name="ElementShortName">fifo5_write</obj_property>
+                  <obj_property name="ObjectShortName">fifo5_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="HystThreshold_U0_group">
+         <obj_property name="label">HystThreshold_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="HystThreshold_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="hist_hthr_group">
+               <obj_property name="label">hist_hthr(hist_hthr_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/hist_hthr_blk_n">
+                  <obj_property name="ElementShortName">hist_hthr_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/hist_hthr_dout">
+                  <obj_property name="ElementShortName">hist_hthr_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/hist_hthr_empty_n">
+                  <obj_property name="ElementShortName">hist_hthr_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/hist_hthr_read">
+                  <obj_property name="ElementShortName">hist_hthr_read</obj_property>
+                  <obj_property name="ObjectShortName">hist_hthr_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="hist_lthr_group">
+               <obj_property name="label">hist_lthr(hist_lthr_c_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/hist_lthr_blk_n">
+                  <obj_property name="ElementShortName">hist_lthr_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/hist_lthr_dout">
+                  <obj_property name="ElementShortName">hist_lthr_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/hist_lthr_empty_n">
+                  <obj_property name="ElementShortName">hist_lthr_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/hist_lthr_read">
+                  <obj_property name="ElementShortName">hist_lthr_read</obj_property>
+                  <obj_property name="ObjectShortName">hist_lthr_read</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="group" fp_name="fifo5_group">
+               <obj_property name="label">fifo5(fifo5_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/fifo5_blk_n">
+                  <obj_property name="ElementShortName">fifo5_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo5_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/fifo5_dout">
+                  <obj_property name="ElementShortName">fifo5_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">fifo5_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/fifo5_empty_n">
+                  <obj_property name="ElementShortName">fifo5_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo5_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/fifo5_read">
+                  <obj_property name="ElementShortName">fifo5_read</obj_property>
+                  <obj_property name="ObjectShortName">fifo5_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="HystThreshold_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="HystThreshold_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo6_group">
+               <obj_property name="label">fifo6(fifo6_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/fifo6_blk_n">
+                  <obj_property name="ElementShortName">fifo6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/fifo6_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/fifo6_full_n">
+                  <obj_property name="ElementShortName">fifo6_full_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo6_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThreshold_U0/fifo6_write">
+                  <obj_property name="ElementShortName">fifo6_write</obj_property>
+                  <obj_property name="ObjectShortName">fifo6_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="HystThresholdComp_U0_group">
+         <obj_property name="label">HystThresholdComp_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="HystThresholdComp_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo6_group">
+               <obj_property name="label">fifo6(fifo6_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/fifo6_blk_n">
+                  <obj_property name="ElementShortName">fifo6_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo6_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/fifo6_dout">
+                  <obj_property name="ElementShortName">fifo6_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">fifo6_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/fifo6_empty_n">
+                  <obj_property name="ElementShortName">fifo6_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo6_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/fifo6_read">
+                  <obj_property name="ElementShortName">fifo6_read</obj_property>
+                  <obj_property name="ObjectShortName">fifo6_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="HystThresholdComp_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="HystThresholdComp_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo7_group">
+               <obj_property name="label">fifo7(fifo7_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/fifo7_blk_n">
+                  <obj_property name="ElementShortName">fifo7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/fifo7_din">
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/fifo7_full_n">
+                  <obj_property name="ElementShortName">fifo7_full_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo7_full_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/HystThresholdComp_U0/fifo7_write">
+                  <obj_property name="ElementShortName">fifo7_write</obj_property>
+                  <obj_property name="ObjectShortName">fifo7_write</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="GrayArray2AXIS_U0_group">
+         <obj_property name="label">GrayArray2AXIS_U0</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="GrayArray2AXIS_U0_Input_group">
+            <obj_property name="label">Input Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="group" fp_name="fifo7_group">
+               <obj_property name="label">fifo7(fifo7_U, FIFO)</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GrayArray2AXIS_U0/fifo7_blk_n">
+                  <obj_property name="ElementShortName">fifo7_blk_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo7_blk_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GrayArray2AXIS_U0/fifo7_dout">
+                  <obj_property name="ElementShortName">fifo7_dout[7:0]</obj_property>
+                  <obj_property name="ObjectShortName">fifo7_dout[7:0]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GrayArray2AXIS_U0/fifo7_empty_n">
+                  <obj_property name="ElementShortName">fifo7_empty_n</obj_property>
+                  <obj_property name="ObjectShortName">fifo7_empty_n</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GrayArray2AXIS_U0/fifo7_read">
+                  <obj_property name="ElementShortName">fifo7_read</obj_property>
+                  <obj_property name="ObjectShortName">fifo7_read</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="GrayArray2AXIS_U0_Handshake_group">
+            <obj_property name="label">Block-level handshake</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GrayArray2AXIS_U0/ap_start">
+               <obj_property name="ElementShortName">ap_start</obj_property>
+               <obj_property name="ObjectShortName">ap_start</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GrayArray2AXIS_U0/ap_ready">
+               <obj_property name="ElementShortName">ap_ready</obj_property>
+               <obj_property name="ObjectShortName">ap_ready</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GrayArray2AXIS_U0/ap_done">
+               <obj_property name="ElementShortName">ap_done</obj_property>
+               <obj_property name="ObjectShortName">ap_done</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_canny_edge_detection_top/AESL_inst_canny_edge_detection/GrayArray2AXIS_U0/ap_continue">
+               <obj_property name="ElementShortName">ap_continue</obj_property>
+               <obj_property name="ObjectShortName">ap_continue</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="GrayArray2AXIS_U0_Output_group">
+            <obj_property name="label">Output Channels</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

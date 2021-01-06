@@ -1,0 +1,134 @@
+
+
+================================================================
+== Vivado HLS Report for 'canny_edge_detection_1_1'
+================================================================
+* Date:           Wed Jan  6 15:36:46 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        EdgeDetection
+* Solution:       solution1
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.908|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    0|    0|    0|    0|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT |
++-----------------+---------+-------+-------+------+
+|DSP              |        -|      -|      -|     -|
+|Expression       |        -|      -|      0|     8|
+|FIFO             |        -|      -|      -|     -|
+|Instance         |        -|      -|      -|     -|
+|Memory           |        -|      -|      -|     -|
+|Multiplexer      |        -|      -|      -|    27|
+|Register         |        -|      -|      2|     -|
++-----------------+---------+-------+-------+------+
+|Total            |        0|      0|      2|    35|
++-----------------+---------+-------+-------+------+
+|Available        |       40|     40|  16000|  8000|
++-----------------+---------+-------+-------+------+
+|Utilization (%)  |        0|      0|   ~0  |  ~0  |
++-----------------+---------+-------+-------+------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------+----------+-------+---+----+------------+------------+
+    |  Variable Name  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1  |    or    |      0|  0|   8|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+    |Total            |          |      0|  0|   8|           1|           1|
+    +-----------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------+----+-----------+-----+-----------+
+    |         Name        | LUT| Input Size| Bits| Total Bits|
+    +---------------------+----+-----------+-----+-----------+
+    |ap_done              |   9|          2|    1|          2|
+    |hist_hthr_out_blk_n  |   9|          2|    1|          2|
+    |hist_lthr_out_blk_n  |   9|          2|    1|          2|
+    +---------------------+----+-----------+-----+-----------+
+    |Total                |  27|          6|    3|          6|
+    +---------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  2|   0|    2|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |       Source Object      |    C Type    |
++----------------------+-----+-----+------------+--------------------------+--------------+
+|ap_clk                |  in |    1| ap_ctrl_hs | canny_edge_detection.1.1 | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs | canny_edge_detection.1.1 | return value |
+|ap_start              |  in |    1| ap_ctrl_hs | canny_edge_detection.1.1 | return value |
+|ap_done               | out |    1| ap_ctrl_hs | canny_edge_detection.1.1 | return value |
+|ap_continue           |  in |    1| ap_ctrl_hs | canny_edge_detection.1.1 | return value |
+|ap_idle               | out |    1| ap_ctrl_hs | canny_edge_detection.1.1 | return value |
+|ap_ready              | out |    1| ap_ctrl_hs | canny_edge_detection.1.1 | return value |
+|hist_hthr             |  in |    8|   ap_none  |         hist_hthr        |    pointer   |
+|hist_lthr             |  in |    8|   ap_none  |         hist_lthr        |    pointer   |
+|hist_hthr_out_din     | out |    8|   ap_fifo  |       hist_hthr_out      |    pointer   |
+|hist_hthr_out_full_n  |  in |    1|   ap_fifo  |       hist_hthr_out      |    pointer   |
+|hist_hthr_out_write   | out |    1|   ap_fifo  |       hist_hthr_out      |    pointer   |
+|hist_lthr_out_din     | out |    8|   ap_fifo  |       hist_lthr_out      |    pointer   |
+|hist_lthr_out_full_n  |  in |    1|   ap_fifo  |       hist_lthr_out      |    pointer   |
+|hist_lthr_out_write   | out |    1|   ap_fifo  |       hist_lthr_out      |    pointer   |
++----------------------+-----+-----+------------+--------------------------+--------------+
+

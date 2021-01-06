@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="HlsImProc.hpp" path="D:\Projects\Verilog\HLS\HLS-canny-edge-detection-master\src\HlsImProc.hpp"/>
+    <originFiles name="canny_edge_detection.cpp" path="D:\Projects\Verilog\HLS\HLS-canny-edge-detection-master\src\canny_edge_detection.cpp"/>
+    <originFiles name="canny_edge_detection.h" path="D:\Projects\Verilog\HLS\HLS-canny-edge-detection-master\src\canny_edge_detection.h"/>
+    <originFiles name="lenna.png" path="D:\Projects\Verilog\HLS\EdgeDetection\lenna.png"/>
+  </source>
+  <testbench>
+    <originFiles name="canny_edge_detection_tb.cpp" path="D:\Projects\Verilog\HLS\HLS-canny-edge-detection-master\testbench\canny_edge_detection_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

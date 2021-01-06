@@ -1,0 +1,163 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'canny_edge_detection'" level="0">
+<item name = "Date">Wed Jan  6 15:36:52 2021
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">EdgeDetection</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">aartix7</item>
+<item name = "Target device">xa7a12tcsg325-1q</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 11.000, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">277003, 277003, 276994, 276994, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="Sobel_512u_512u_U0">Sobel_512u_512u_s, 276993, 276993, 276993, 276993, none</column>
+<column name="GaussianBlur_U0">GaussianBlur, 265217, 265217, 265217, 265217, none</column>
+<column name="NonMaxSuppression_U0">NonMaxSuppression, 264193, 264193, 264193, 264193, none</column>
+<column name="HystThresholdComp_U0">HystThresholdComp, 264193, 264193, 264193, 264193, none</column>
+<column name="AXIS2GrayArray76_U0">AXIS2GrayArray76, 265731, 265731, 265731, 265731, none</column>
+<column name="ZeroPadding_U0">ZeroPadding, 264193, 264193, 264193, 264193, none</column>
+<column name="GrayArray2AXIS_U0">GrayArray2AXIS, 264193, 264193, 264193, 264193, none</column>
+<column name="HystThreshold_U0">HystThreshold, 264193, 264193, 264193, 264193, none</column>
+<column name="canny_edge_detection_1_1_U0">canny_edge_detection_1_1, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 8</column>
+<column name="FIFO">0, -, 60, 238</column>
+<column name="Instance">6, 5, 4509, 6685</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, -</column>
+<column name="Register">-, -, -, -</column>
+<specialColumn name="Available">40, 40, 16000, 8000</specialColumn>
+<specialColumn name="Utilization (%)">15, 12, 28, 86</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="AXIS2GrayArray76_U0">AXIS2GrayArray76, 0, 3, 373, 628</column>
+<column name="GaussianBlur_U0">GaussianBlur, 2, 0, 480, 813</column>
+<column name="GrayArray2AXIS_U0">GrayArray2AXIS, 0, 0, 115, 408</column>
+<column name="HystThreshold_U0">HystThreshold, 0, 0, 59, 267</column>
+<column name="HystThresholdComp_U0">HystThresholdComp, 1, 0, 103, 405</column>
+<column name="NonMaxSuppression_U0">NonMaxSuppression, 2, 0, 137, 564</column>
+<column name="Sobel_512u_512u_U0">Sobel_512u_512u_s, 1, 2, 3131, 3211</column>
+<column name="ZeroPadding_U0">ZeroPadding, 0, 0, 51, 282</column>
+<column name="canny_edge_detection_1_1_U0">canny_edge_detection_1_1, 0, 0, 2, 35</column>
+<column name="canny_edge_detection_CONTROL_BUS_s_axi_U">canny_edge_detection_CONTROL_BUS_s_axi, 0, 0, 58, 72</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="fifo1_U">0, 5, 20, 1, 8, 8</column>
+<column name="fifo2_U">0, 5, 20, 1, 8, 8</column>
+<column name="fifo3_grad_U">0, 5, 16, 1, 2, 2</column>
+<column name="fifo3_value_U">0, 5, 20, 1, 8, 8</column>
+<column name="fifo4_U">0, 5, 20, 1, 8, 8</column>
+<column name="fifo5_U">0, 5, 20, 1, 8, 8</column>
+<column name="fifo6_U">0, 5, 20, 1, 8, 8</column>
+<column name="fifo7_U">0, 5, 20, 1, 8, 8</column>
+<column name="hist_hthr_c1_U">0, 5, 20, 2, 8, 16</column>
+<column name="hist_hthr_c_U">0, 5, 21, 6, 8, 48</column>
+<column name="hist_lthr_c2_U">0, 5, 20, 2, 8, 16</column>
+<column name="hist_lthr_c_U">0, 5, 21, 6, 8, 48</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="AXIS2GrayArray76_U0_start_full_n">and, 0, 0, 8, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_CONTROL_BUS_AWVALID">in, 1, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_AWREADY">out, 1, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_AWADDR">in, 5, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_WVALID">in, 1, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_WREADY">out, 1, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_WDATA">in, 32, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_WSTRB">in, 4, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_ARVALID">in, 1, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_ARREADY">out, 1, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_ARADDR">in, 5, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_RVALID">out, 1, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_RREADY">in, 1, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_RDATA">out, 32, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_RRESP">out, 2, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_BVALID">out, 1, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_BREADY">in, 1, s_axi, CONTROL_BUS, pointer</column>
+<column name="s_axi_CONTROL_BUS_BRESP">out, 2, s_axi, CONTROL_BUS, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, canny_edge_detection, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_none, canny_edge_detection, return value</column>
+<column name="s_axi_aclk">in, 1, ap_ctrl_none, canny_edge_detection, return value</column>
+<column name="ap_rst_n_s_axi_aclk">in, 1, ap_ctrl_none, canny_edge_detection, return value</column>
+<column name="axis_in_TDATA">in, 24, axis, axis_in_V_data_V, pointer</column>
+<column name="axis_in_TUSER">in, 1, axis, axis_in_V_user_V, pointer</column>
+<column name="axis_in_TLAST">in, 1, axis, axis_in_V_last_V, pointer</column>
+<column name="axis_in_TVALID">in, 1, axis, axis_in_V_last_V, pointer</column>
+<column name="axis_in_TREADY">out, 1, axis, axis_in_V_last_V, pointer</column>
+<column name="axis_out_TDATA">out, 24, axis, axis_out_V_data_V, pointer</column>
+<column name="axis_out_TUSER">out, 1, axis, axis_out_V_user_V, pointer</column>
+<column name="axis_out_TLAST">out, 1, axis, axis_out_V_last_V, pointer</column>
+<column name="axis_out_TVALID">out, 1, axis, axis_out_V_last_V, pointer</column>
+<column name="axis_out_TREADY">in, 1, axis, axis_out_V_last_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

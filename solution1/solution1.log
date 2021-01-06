@@ -1,0 +1,427 @@
+==============================================================
+File generated on Wed Jan 06 15:29:25 +0530 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Wed Jan 06 15:32:12 +0530 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Wed Jan 06 15:34:00 +0530 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Wed Jan 06 15:35:03 +0530 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Wed Jan 06 15:35:48 +0530 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+WARNING: [HLS 200-40] Skipped source file 'lenna.png'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx.
+INFO: [HLS 200-10] Analyzing design file 'HLS-canny-edge-detection-master/src/canny_edge_detection.cpp' ... 
+WARNING: [HLS 214-113] Variables defined outside dataflow region are not supported: HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:59:47
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file HLS-canny-edge-detection-master/src/canny_edge_detection.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 103.375 ; gain = 18.488
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 103.375 ; gain = 18.488
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:41 . Memory (MB): peak = 183.910 ; gain = 99.023
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sqrt' into 'hlsimproc::HlsImProc::Sobel<512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:317) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'hlsimproc::HlsImProc::Sobel<512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:317) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:43 . Memory (MB): peak = 237.691 ; gain = 152.805
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:484) in function 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:376) in function 'hlsimproc::HlsImProc::NonMaxSuppression<512u, 512u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:273) in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:203) in function 'hlsimproc::HlsImProc::GaussianBlur<512u, 512u>' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:492) in function 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:499) in function 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:500) in function 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:505) in function 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:510) in function 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:511) in function 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:385) in function 'hlsimproc::HlsImProc::NonMaxSuppression<512u, 512u>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:392) in function 'hlsimproc::HlsImProc::NonMaxSuppression<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:393) in function 'hlsimproc::HlsImProc::NonMaxSuppression<512u, 512u>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:398) in function 'hlsimproc::HlsImProc::NonMaxSuppression<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:282) in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:289) in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:290) in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:295) in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:304) in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:305) in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.5' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:311) in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.5.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:312) in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:211) in function 'hlsimproc::HlsImProc::GaussianBlur<512u, 512u>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:219) in function 'hlsimproc::HlsImProc::GaussianBlur<512u, 512u>' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:220) in function 'hlsimproc::HlsImProc::GaussianBlur<512u, 512u>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.3' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:226) in function 'hlsimproc::HlsImProc::GaussianBlur<512u, 512u>' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:232) in function 'hlsimproc::HlsImProc::GaussianBlur<512u, 512u>' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.4.1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:233) in function 'hlsimproc::HlsImProc::GaussianBlur<512u, 512u>' completely with a factor of 5.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:476) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf.value' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:368) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf.grad' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:368) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:251) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:190) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:477) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.value' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.grad' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:369) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:252) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_SOBEL_KERNEL'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_SOBEL_KERNEL'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:191) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'GAUSS_KERNEL'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:477) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.value' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:369) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.grad' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:369) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:252) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_SOBEL_KERNEL'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_SOBEL_KERNEL'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:191) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'GAUSS_KERNEL'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:14) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:17) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:58) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:116) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2018.3/continuous/2018_12_06_2405991/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:50) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sqrt' into 'hlsimproc::HlsImProc::Sobel<512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:317) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'hlsimproc::HlsImProc::Sobel<512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:317) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'canny_edge_detection', detected/extracted 8 process function(s): 
+	 'hlsimproc::HlsImProc::AXIS2GrayArray<512u, 512u>76'
+	 'hlsimproc::HlsImProc::GaussianBlur<512u, 512u>'
+	 'hlsimproc::HlsImProc::Sobel<512u, 512u>'
+	 'hlsimproc::HlsImProc::NonMaxSuppression<512u, 512u>'
+	 'hlsimproc::HlsImProc::ZeroPadding<512u, 512u>'
+	 'hlsimproc::HlsImProc::HystThreshold<512u, 512u>'
+	 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>'
+	 'hlsimproc::HlsImProc::GrayArray2AXIS<512u, 512u>'.
+WARNING: [XFORM 203-124] Array  'fifo1' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'fifo3.value' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'fifo3.grad' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (HLS-canny-edge-detection-master/src/HlsImProc.hpp:334:17) to (HLS-canny-edge-detection-master/src/HlsImProc.hpp:351:17) in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (HLS-canny-edge-detection-master/src/HlsImProc.hpp:376:48) to (HLS-canny-edge-detection-master/src/HlsImProc.hpp:376:41) in function 'hlsimproc::HlsImProc::NonMaxSuppression<512u, 512u>'... converting 9 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (HLS-canny-edge-detection-master/src/HlsImProc.hpp:484:48) to (HLS-canny-edge-detection-master/src/HlsImProc.hpp:484:41) in function 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>'... converting 17 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (HLS-canny-edge-detection-master/src/HlsImProc.hpp:449:48) to (HLS-canny-edge-detection-master/src/HlsImProc.hpp:449:41) in function 'hlsimproc::HlsImProc::HystThreshold<512u, 512u>'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'hlsimproc::HlsImProc::ZeroPadding<512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:529:41)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:6:41)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'hlsimproc::HlsImProc::NonMaxSuppression<512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:368:41)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:476:41)...8 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'hlsimproc::HlsImProc::GaussianBlur<512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:190:41)...21 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:04 ; elapsed = 00:00:47 . Memory (MB): peak = 313.035 ; gain = 228.148
+WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::ZeroPadding<512u, 512u>' to 'ZeroPadding' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:529:41)
+WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::Sobel<512u, 512u>' to 'Sobel<512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:6:41)
+WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::NonMaxSuppression<512u, 512u>' to 'NonMaxSuppression' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:368:41)
+WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::HystThresholdComp<512u, 512u>' to 'HystThresholdComp' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:476:41)
+WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::HystThreshold<512u, 512u>' to 'HystThreshold' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:75:41)
+WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::GrayArray2AXIS<512u, 512u>' to 'GrayArray2AXIS' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:157:41)
+WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::GaussianBlur<512u, 512u>' to 'GaussianBlur' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:190:41)
+WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::AXIS2GrayArray<512u, 512u>76' to 'AXIS2GrayArray76' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:44:13)
+WARNING: [XFORM 203-631] Renaming function 'canny_edge_detection.entry3' to 'canny_edge_detection.1.1' 
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:49 . Memory (MB): peak = 416.809 ; gain = 331.922
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'canny_edge_detection' ...
+WARNING: [SYN 201-103] Legalizing function name 'canny_edge_detection.1.1' to 'canny_edge_detection_1_1'.
+WARNING: [SYN 201-103] Legalizing function name 'Sobel<512u, 512u>' to 'Sobel_512u_512u_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'canny_edge_detection_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 50.215 seconds; current allocated memory: 354.634 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.547 seconds; current allocated memory: 354.701 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'AXIS2GrayArray76' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2.2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+WARNING: [SCHED 204-21] Estimated clock period (11ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'AXIS2GrayArray76' consists of the following:
+	'mul' operation of DSP[141] ('phitmp1_cast_i_i_i', HLS-canny-edge-detection-master/src/HlsImProc.hpp:125) [140]  (3.36 ns)
+	'add' operation of DSP[141] ('tmp_75_i_i_i', HLS-canny-edge-detection-master/src/HlsImProc.hpp:125) [141]  (3.82 ns)
+	'add' operation of DSP[143] ('pix_gray', HLS-canny-edge-detection-master/src/HlsImProc.hpp:125) [143]  (3.82 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.712 seconds; current allocated memory: 355.043 MB.
+INFO: [HLS 200-434] Only 3 loops out of a total 4 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.304 seconds; current allocated memory: 355.732 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'GaussianBlur' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.416 seconds; current allocated memory: 356.282 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.299 seconds; current allocated memory: 356.874 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Sobel_512u_512u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 28.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.529 seconds; current allocated memory: 357.430 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.388 seconds; current allocated memory: 358.120 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'NonMaxSuppression' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.497 seconds; current allocated memory: 358.460 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 358.864 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ZeroPadding' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.419 seconds; current allocated memory: 359.005 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.167 seconds; current allocated memory: 359.135 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'HystThreshold' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.294 seconds; current allocated memory: 359.235 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.23 seconds; current allocated memory: 359.392 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'HystThresholdComp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.283 seconds; current allocated memory: 359.600 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.185 seconds; current allocated memory: 359.835 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'GrayArray2AXIS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.279 seconds; current allocated memory: 359.958 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.157 seconds; current allocated memory: 360.087 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'canny_edge_detection' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.191 seconds; current allocated memory: 360.221 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.747 seconds; current allocated memory: 360.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'canny_edge_detection_1_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'canny_edge_detection_1_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.584 seconds; current allocated memory: 361.163 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'AXIS2GrayArray76' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'canny_edge_detection_mul_mul_15ns_8ns_23_1_1' to 'canny_edge_detectbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'canny_edge_detection_mac_muladd_17ns_8ns_23ns_25_1_1' to 'canny_edge_detectcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'canny_edge_detection_mac_muladd_16ns_8ns_23ns_23_1_1' to 'canny_edge_detectdEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'canny_edge_detectbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'canny_edge_detectcud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'canny_edge_detectdEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIS2GrayArray76'.
+INFO: [HLS 200-111]  Elapsed time: 1.239 seconds; current allocated memory: 362.029 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'GaussianBlur' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'GaussianBlur_line_buf' to 'GaussianBlur_lineeOg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'GaussianBlur'.
+INFO: [HLS 200-111]  Elapsed time: 0.592 seconds; current allocated memory: 363.138 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Sobel_512u_512u_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'Sobel_512u_512u_s_line_buf' to 'Sobel_512u_512u_sfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'canny_edge_detection_sitofp_32s_32_5_1' to 'canny_edge_detectg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'canny_edge_detection_fsqrt_32ns_32ns_32_12_1' to 'canny_edge_detecthbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'canny_edge_detection_sdiv_20s_11s_20_24_1' to 'canny_edge_detectibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'canny_edge_detection_mul_mul_11s_11s_22_1_1' to 'canny_edge_detectjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'canny_edge_detection_mac_muladd_11s_11s_22s_22_1_1' to 'canny_edge_detectkbM' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'canny_edge_detectg8j': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'canny_edge_detecthbi': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'canny_edge_detectibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'canny_edge_detectjbC': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'canny_edge_detectkbM': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel_512u_512u_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.832 seconds; current allocated memory: 364.790 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'NonMaxSuppression' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'NonMaxSuppression_line_buf_value' to 'NonMaxSuppressionlbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'NonMaxSuppression_line_buf_grad' to 'NonMaxSuppressionmb6' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'NonMaxSuppression'.
+INFO: [HLS 200-111]  Elapsed time: 0.771 seconds; current allocated memory: 365.717 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ZeroPadding' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ZeroPadding'.
+INFO: [HLS 200-111]  Elapsed time: 0.569 seconds; current allocated memory: 366.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'HystThreshold' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'HystThreshold'.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 366.629 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'HystThresholdComp' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'HystThresholdComp_line_buf' to 'HystThresholdCompncg' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'HystThresholdComp'.
+INFO: [HLS 200-111]  Elapsed time: 0.342 seconds; current allocated memory: 367.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'GrayArray2AXIS' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'GrayArray2AXIS'.
+INFO: [HLS 200-111]  Elapsed time: 0.401 seconds; current allocated memory: 367.705 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'canny_edge_detection' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_edge_detection/axis_in_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_edge_detection/axis_in_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_edge_detection/axis_in_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_edge_detection/axis_out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_edge_detection/axis_out_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_edge_detection/axis_out_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_edge_detection/hist_hthr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny_edge_detection/hist_lthr' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'canny_edge_detection' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Bundling port 'hist_hthr' and 'hist_lthr' to AXI-Lite port CONTROL_BUS.
+INFO: [RTGEN 206-100] Generated clock port 's_axi_aclk' for AXI-Lite bundle 'CONTROL_BUS'.
+INFO: [SYN 201-210] Renamed object name 'start_for_GaussianBlur_U0' to 'start_for_Gaussiaocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_HystThreshold_U0' to 'start_for_HystThrpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Sobel_512u_512u_U0' to 'start_for_Sobel_5qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_NonMaxSuppression_U0' to 'start_for_NonMaxSrcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_ZeroPadding_U0' to 'start_for_ZeroPadsc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_HystThresholdComp_U0' to 'start_for_HystThrtde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_GrayArray2AXIS_U0' to 'start_for_GrayArrudo' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'canny_edge_detection'.
+INFO: [HLS 200-111]  Elapsed time: 0.578 seconds; current allocated memory: 368.768 MB.
+INFO: [RTMG 210-278] Implementing memory 'GaussianBlur_lineeOg_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'canny_edge_detectibs_div'
+INFO: [RTMG 210-278] Implementing memory 'Sobel_512u_512u_sfYi_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'NonMaxSuppressionmb6_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'hist_hthr_c1_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'hist_lthr_c2_U(fifo_w8_d2_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'hist_hthr_c_U(fifo_w8_d6_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'hist_lthr_c_U(fifo_w8_d6_A)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Gaussiaocq_U(start_for_Gaussiaocq)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_HystThrpcA_U(start_for_HystThrpcA)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Sobel_5qcK_U(start_for_Sobel_5qcK)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_NonMaxSrcU_U(start_for_NonMaxSrcU)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_ZeroPadsc4_U(start_for_ZeroPadsc4)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_HystThrtde_U(start_for_HystThrtde)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_GrayArrudo_U(start_for_GrayArrudo)' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:14 ; elapsed = 00:01:10 . Memory (MB): peak = 442.789 ; gain = 357.902
+INFO: [SYSC 207-301] Generating SystemC RTL for canny_edge_detection.
+INFO: [VHDL 208-304] Generating VHDL RTL for canny_edge_detection.
+INFO: [VLOG 209-307] Generating Verilog RTL for canny_edge_detection.
+INFO: [HLS 200-112] Total elapsed time: 69.895 seconds; peak allocated memory: 368.768 MB.

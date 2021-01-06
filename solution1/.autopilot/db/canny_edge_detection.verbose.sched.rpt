@@ -1,0 +1,303 @@
+
+
+================================================================
+== Vivado HLS Report for 'canny_edge_detection'
+================================================================
+* Date:           Wed Jan  6 15:36:44 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        EdgeDetection
+* Solution:       solution1
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|    11.000|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  277003|  277003|  276994|  276994| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 18
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 18, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.90>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%hist_lthr_c2 = alloca i8, align 1" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 19 'alloca' 'hist_lthr_c2' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%hist_hthr_c1 = alloca i8, align 1" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 20 'alloca' 'hist_hthr_c1' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%hist_lthr_c = alloca i8, align 1" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 21 'alloca' 'hist_lthr_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%hist_hthr_c = alloca i8, align 1" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 22 'alloca' 'hist_hthr_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_1 : Operation 23 [1/1] (3.90ns)   --->   "call void @canny_edge_detection.1.1(i8* %hist_hthr, i8* %hist_lthr, i8* %hist_hthr_c1, i8* %hist_lthr_c2)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 23 'call' <Predicate = true> <Delay = 3.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 24 [2/2] (0.00ns)   --->   "call fastcc void @AXIS2GrayArray76(i24* %axis_in_V_data_V, i1* %axis_in_V_user_V, i1* %axis_in_V_last_V, i8* nocapture %hist_hthr_c1, i8* nocapture %hist_lthr_c2, i8* %hist_hthr_c, i8* %hist_lthr_c)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 24 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 25 [1/2] (0.00ns)   --->   "call fastcc void @AXIS2GrayArray76(i24* %axis_in_V_data_V, i1* %axis_in_V_user_V, i1* %axis_in_V_last_V, i8* nocapture %hist_hthr_c1, i8* nocapture %hist_lthr_c2, i8* %hist_hthr_c, i8* %hist_lthr_c)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 25 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 26 [2/2] (0.00ns)   --->   "call fastcc void @GaussianBlur()" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:62]   --->   Operation 26 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 27 [1/2] (0.00ns)   --->   "call fastcc void @GaussianBlur()" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:62]   --->   Operation 27 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 28 [2/2] (0.00ns)   --->   "call fastcc void @"Sobel<512u, 512u>"()" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:65]   --->   Operation 28 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 29 [1/2] (0.00ns)   --->   "call fastcc void @"Sobel<512u, 512u>"()" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:65]   --->   Operation 29 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 30 [2/2] (0.00ns)   --->   "call fastcc void @NonMaxSuppression()" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:68]   --->   Operation 30 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 0.00>
+ST_9 : Operation 31 [1/2] (0.00ns)   --->   "call fastcc void @NonMaxSuppression()" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:68]   --->   Operation 31 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 0.00>
+ST_10 : Operation 32 [2/2] (0.00ns)   --->   "call fastcc void @ZeroPadding()" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:72]   --->   Operation 32 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 0.00>
+ST_11 : Operation 33 [1/2] (0.00ns)   --->   "call fastcc void @ZeroPadding()" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:72]   --->   Operation 33 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 34 [2/2] (0.00ns)   --->   "call fastcc void @HystThreshold(i8* %hist_hthr_c, i8* %hist_lthr_c)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 34 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 35 [1/2] (0.00ns)   --->   "call fastcc void @HystThreshold(i8* %hist_hthr_c, i8* %hist_lthr_c)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 35 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 0.00>
+ST_14 : Operation 36 [2/2] (0.00ns)   --->   "call fastcc void @HystThresholdComp()" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:78]   --->   Operation 36 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 37 [1/2] (0.00ns)   --->   "call fastcc void @HystThresholdComp()" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:78]   --->   Operation 37 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 0.00>
+ST_16 : Operation 38 [2/2] (0.00ns)   --->   "call fastcc void @GrayArray2AXIS(i24* %axis_out_V_data_V, i1* %axis_out_V_user_V, i1* %axis_out_V_last_V)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:81]   --->   Operation 38 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 0.00>
+ST_17 : Operation 39 [1/2] (0.00ns)   --->   "call fastcc void @GrayArray2AXIS(i24* %axis_out_V_data_V, i1* %axis_out_V_user_V, i1* %axis_out_V_last_V)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:81]   --->   Operation 39 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 0.00>
+ST_18 : Operation 40 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @fifo1177_str, i32 1, [1 x i8]* @p_str178, [1 x i8]* @p_str178, i32 1, i32 262144, i8* @fifo1, i8* @fifo1)"   --->   Operation 40 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* @fifo1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str179, i32 0, i32 0, [1 x i8]* @p_str180, [1 x i8]* @p_str181, [1 x i8]* @p_str182, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str183, [1 x i8]* @p_str184)"   --->   Operation 41 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 42 [1/1] (0.00ns)   --->   "%empty_21 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @fifo2168_str, i32 1, [1 x i8]* @p_str169, [1 x i8]* @p_str169, i32 1, i32 262144, i8* @fifo2, i8* @fifo2)"   --->   Operation 42 'specchannel' 'empty_21' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* @fifo2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str170, i32 0, i32 0, [1 x i8]* @p_str171, [1 x i8]* @p_str172, [1 x i8]* @p_str173, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str174, [1 x i8]* @p_str175)"   --->   Operation 43 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 44 [1/1] (0.00ns)   --->   "%empty_22 = call i32 (...)* @_ssdm_op_SpecChannel([14 x i8]* @fifo3_OC_grad159_str, i32 1, [1 x i8]* @p_str160, [1 x i8]* @p_str160, i32 1, i32 262144, i2* @fifo3_grad, i2* @fifo3_grad)"   --->   Operation 44 'specchannel' 'empty_22' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i2* @fifo3_grad, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str161, i32 0, i32 0, [1 x i8]* @p_str162, [1 x i8]* @p_str163, [1 x i8]* @p_str164, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str165, [1 x i8]* @p_str166)"   --->   Operation 45 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 46 [1/1] (0.00ns)   --->   "%empty_23 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @fifo3_OC_value150_st, i32 1, [1 x i8]* @p_str151, [1 x i8]* @p_str151, i32 1, i32 262144, i8* @fifo3_value, i8* @fifo3_value)"   --->   Operation 46 'specchannel' 'empty_23' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* @fifo3_value, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str152, i32 0, i32 0, [1 x i8]* @p_str153, [1 x i8]* @p_str154, [1 x i8]* @p_str155, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str156, [1 x i8]* @p_str157)"   --->   Operation 47 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 48 [1/1] (0.00ns)   --->   "%empty_24 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @fifo4141_str, i32 1, [1 x i8]* @p_str142, [1 x i8]* @p_str142, i32 1, i32 262144, i8* @fifo4, i8* @fifo4)"   --->   Operation 48 'specchannel' 'empty_24' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* @fifo4, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str143, i32 0, i32 0, [1 x i8]* @p_str144, [1 x i8]* @p_str145, [1 x i8]* @p_str146, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str147, [1 x i8]* @p_str148)"   --->   Operation 49 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 50 [1/1] (0.00ns)   --->   "%empty_25 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @fifo5132_str, i32 1, [1 x i8]* @p_str133, [1 x i8]* @p_str133, i32 1, i32 262144, i8* @fifo5, i8* @fifo5)"   --->   Operation 50 'specchannel' 'empty_25' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* @fifo5, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str134, i32 0, i32 0, [1 x i8]* @p_str135, [1 x i8]* @p_str136, [1 x i8]* @p_str137, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str138, [1 x i8]* @p_str139)"   --->   Operation 51 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 52 [1/1] (0.00ns)   --->   "%empty_26 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @fifo6123_str, i32 1, [1 x i8]* @p_str124, [1 x i8]* @p_str124, i32 1, i32 262144, i8* @fifo6, i8* @fifo6)"   --->   Operation 52 'specchannel' 'empty_26' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* @fifo6, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str125, i32 0, i32 0, [1 x i8]* @p_str126, [1 x i8]* @p_str127, [1 x i8]* @p_str128, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str129, [1 x i8]* @p_str130)"   --->   Operation 53 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 54 [1/1] (0.00ns)   --->   "%empty_27 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @fifo7114_str, i32 1, [1 x i8]* @p_str115, [1 x i8]* @p_str115, i32 1, i32 262144, i8* @fifo7, i8* @fifo7)"   --->   Operation 54 'specchannel' 'empty_27' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* @fifo7, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str117, [1 x i8]* @p_str118, [1 x i8]* @p_str119, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str120, [1 x i8]* @p_str121)"   --->   Operation 55 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str2) nounwind" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:48]   --->   Operation 56 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %axis_in_V_data_V), !map !147"   --->   Operation 57 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %axis_in_V_user_V), !map !153"   --->   Operation 58 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %axis_in_V_last_V), !map !157"   --->   Operation 59 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %axis_out_V_data_V), !map !161"   --->   Operation 60 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %axis_out_V_user_V), !map !165"   --->   Operation 61 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %axis_out_V_last_V), !map !169"   --->   Operation 62 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %hist_hthr), !map !173"   --->   Operation 63 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %hist_lthr), !map !177"   --->   Operation 64 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([21 x i8]* @canny_edge_detection_1) nounwind"   --->   Operation 65 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %axis_in_V_data_V, i1* %axis_in_V_user_V, i1* %axis_in_V_last_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:42]   --->   Operation 66 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %axis_out_V_data_V, i1* %axis_out_V_user_V, i1* %axis_out_V_last_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:43]   --->   Operation 67 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 68 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %hist_hthr, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [12 x i8]* @p_str4, [1 x i8]* @p_str2, [11 x i8]* @p_str5, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:44]   --->   Operation 68 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 69 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %hist_lthr, [10 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [12 x i8]* @p_str4, [1 x i8]* @p_str2, [11 x i8]* @p_str5, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:45]   --->   Operation 69 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 70 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str6, i32 0, i32 0, [1 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:46]   --->   Operation 70 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 71 [1/1] (0.00ns)   --->   "%empty_28 = call i32 (...)* @_ssdm_op_SpecChannel([12 x i8]* @hist_hthr_c_str, i32 1, [1 x i8]* @p_str88, [1 x i8]* @p_str88, i32 6, i32 0, i8* %hist_hthr_c, i8* %hist_hthr_c)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 71 'specchannel' 'empty_28' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 72 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %hist_hthr_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str89, i32 0, i32 0, [1 x i8]* @p_str90, [1 x i8]* @p_str91, [1 x i8]* @p_str92, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str93, [1 x i8]* @p_str94)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 72 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 73 [1/1] (0.00ns)   --->   "%empty_29 = call i32 (...)* @_ssdm_op_SpecChannel([12 x i8]* @hist_lthr_c_str, i32 1, [1 x i8]* @p_str95, [1 x i8]* @p_str95, i32 6, i32 0, i8* %hist_lthr_c, i8* %hist_lthr_c)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 73 'specchannel' 'empty_29' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 74 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %hist_lthr_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str96, i32 0, i32 0, [1 x i8]* @p_str97, [1 x i8]* @p_str98, [1 x i8]* @p_str99, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str100, [1 x i8]* @p_str101)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 74 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 75 [1/1] (0.00ns)   --->   "%empty_30 = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @hist_hthr_c1_str, i32 1, [1 x i8]* @p_str27, [1 x i8]* @p_str27, i32 2, i32 0, i8* %hist_hthr_c1, i8* %hist_hthr_c1)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 75 'specchannel' 'empty_30' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 76 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %hist_hthr_c1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str28, i32 0, i32 0, [1 x i8]* @p_str29, [1 x i8]* @p_str30, [1 x i8]* @p_str31, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str32, [1 x i8]* @p_str33)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 76 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 77 [1/1] (0.00ns)   --->   "%empty_31 = call i32 (...)* @_ssdm_op_SpecChannel([13 x i8]* @hist_lthr_c2_str, i32 1, [1 x i8]* @p_str34, [1 x i8]* @p_str34, i32 2, i32 0, i8* %hist_lthr_c2, i8* %hist_lthr_c2)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 77 'specchannel' 'empty_31' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %hist_lthr_c2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str35, i32 0, i32 0, [1 x i8]* @p_str36, [1 x i8]* @p_str37, [1 x i8]* @p_str38, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str39, [1 x i8]* @p_str40)" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40]   --->   Operation 78 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_18 : Operation 79 [1/1] (0.00ns)   --->   "ret void" [HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:82]   --->   Operation 79 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 3.91ns
+The critical path consists of the following:
+	'alloca' operation ('hist_lthr_c2', HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40) [17]  (0 ns)
+	'call' operation (HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:40) to 'canny_edge_detection.1.1' [60]  (3.91 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 0ns
+The critical path consists of the following:
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+ <State 16>: 0ns
+The critical path consists of the following:
+
+ <State 17>: 0ns
+The critical path consists of the following:
+
+ <State 18>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

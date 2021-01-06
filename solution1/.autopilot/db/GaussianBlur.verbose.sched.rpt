@@ -1,0 +1,407 @@
+
+
+================================================================
+== Vivado HLS Report for 'GaussianBlur'
+================================================================
+* Date:           Wed Jan  6 15:36:40 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        EdgeDetection
+* Solution:       solution1
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.298|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  265217|  265217|  265217|  265217|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+        |             |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |  265216|  265216|       518|          -|          -|   512|    no    |
+        | + Loop 1.1  |     515|     515|         5|          1|          1|   512|    yes   |
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 3 4 5 6 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!tmp_i)
+3 --> 
+	4  / true
+4 --> 
+	8  / (tmp_66_i)
+	5  / (!tmp_66_i)
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	3  / true
+8 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%window_buf_0_1 = alloca i8"   --->   Operation 9 'alloca' 'window_buf_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%window_buf_0_1_5 = alloca i8"   --->   Operation 10 'alloca' 'window_buf_0_1_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%window_buf_0_2 = alloca i8"   --->   Operation 11 'alloca' 'window_buf_0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%window_buf_0_3 = alloca i8"   --->   Operation 12 'alloca' 'window_buf_0_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%window_buf_1_1 = alloca i8"   --->   Operation 13 'alloca' 'window_buf_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%window_buf_1_1_5 = alloca i8"   --->   Operation 14 'alloca' 'window_buf_1_1_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%window_buf_1_2 = alloca i8"   --->   Operation 15 'alloca' 'window_buf_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%window_buf_1_3 = alloca i8"   --->   Operation 16 'alloca' 'window_buf_1_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%window_buf_2_1 = alloca i8"   --->   Operation 17 'alloca' 'window_buf_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%window_buf_2_1_5 = alloca i8"   --->   Operation 18 'alloca' 'window_buf_2_1_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%window_buf_2_2 = alloca i8"   --->   Operation 19 'alloca' 'window_buf_2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%window_buf_2_3 = alloca i8"   --->   Operation 20 'alloca' 'window_buf_2_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%window_buf_3_1 = alloca i8"   --->   Operation 21 'alloca' 'window_buf_3_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%window_buf_3_1_1 = alloca i8"   --->   Operation 22 'alloca' 'window_buf_3_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%window_buf_3_2 = alloca i8"   --->   Operation 23 'alloca' 'window_buf_3_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%window_buf_3_3 = alloca i8"   --->   Operation 24 'alloca' 'window_buf_3_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%window_buf_4_1 = alloca i8"   --->   Operation 25 'alloca' 'window_buf_4_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%window_buf_4_1_1 = alloca i8"   --->   Operation 26 'alloca' 'window_buf_4_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%window_buf_4_2 = alloca i8"   --->   Operation 27 'alloca' 'window_buf_4_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%window_buf_4_3 = alloca i8"   --->   Operation 28 'alloca' 'window_buf_4_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* @fifo2, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str170, i32 0, i32 0, [1 x i8]* @p_str171, [1 x i8]* @p_str172, [1 x i8]* @p_str173, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str174, [1 x i8]* @p_str175)"   --->   Operation 29 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* @fifo1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str179, i32 0, i32 0, [1 x i8]* @p_str180, [1 x i8]* @p_str181, [1 x i8]* @p_str182, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str183, [1 x i8]* @p_str184)"   --->   Operation 30 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%line_buf = alloca [512 x i40], align 8" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:190]   --->   Operation 31 'alloca' 'line_buf' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 40> <Depth = 512> <RAM>
+ST_1 : Operation 32 [1/1] (1.66ns)   --->   "br label %.loopexit" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:202]   --->   Operation 32 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 2.64>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%yi_i = phi i10 [ 0, %entry ], [ %yi, %.loopexit.loopexit ]"   --->   Operation 33 'phi' 'yi_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (1.70ns)   --->   "%tmp_i = icmp eq i10 %yi_i, -512" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:202]   --->   Operation 34 'icmp' 'tmp_i' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 512, i64 512, i64 512)"   --->   Operation 35 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (2.12ns)   --->   "%yi = add i10 %yi_i, 1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:202]   --->   Operation 36 'add' 'yi' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "br i1 %tmp_i, label %"GaussianBlur<512u, 512u>.exit", label %.preheader9.i.preheader" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:202]   --->   Operation 37 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (1.66ns)   --->   "br label %.preheader9.i"   --->   Operation 38 'br' <Predicate = (!tmp_i)> <Delay = 1.66>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 39 'ret' <Predicate = (tmp_i)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%xi_i = phi i10 [ %xi, %.preheader8.preheader.0.i ], [ 0, %.preheader9.i.preheader ]"   --->   Operation 40 'phi' 'xi_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (1.70ns)   --->   "%tmp_66_i = icmp eq i10 %xi_i, -512" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:203]   --->   Operation 41 'icmp' 'tmp_66_i' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (2.12ns)   --->   "%xi = add i10 %xi_i, 1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:203]   --->   Operation 42 'add' 'xi' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_67_i = zext i10 %xi_i to i64" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:212]   --->   Operation 43 'zext' 'tmp_67_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%line_buf_addr = getelementptr [512 x i40]* %line_buf, i64 0, i64 %tmp_67_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:212]   --->   Operation 44 'getelementptr' 'line_buf_addr' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_3 : Operation 45 [2/2] (3.25ns)   --->   "%line_buf_load = load i40* %line_buf_addr, align 8" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:216]   --->   Operation 45 'load' 'line_buf_load' <Predicate = (!tmp_66_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 40> <Depth = 512> <RAM>
+
+State 4 <SV = 3> <Delay = 8.14>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%window_buf_0_1_6 = load i8* %window_buf_0_1_5"   --->   Operation 46 'load' 'window_buf_0_1_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%window_buf_0_2_1 = load i8* %window_buf_0_2"   --->   Operation 47 'load' 'window_buf_0_2_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%window_buf_0_3_1 = load i8* %window_buf_0_3"   --->   Operation 48 'load' 'window_buf_0_3_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%window_buf_1_1_6 = load i8* %window_buf_1_1_5"   --->   Operation 49 'load' 'window_buf_1_1_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%window_buf_1_2_1 = load i8* %window_buf_1_2"   --->   Operation 50 'load' 'window_buf_1_2_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%window_buf_1_3_1 = load i8* %window_buf_1_3"   --->   Operation 51 'load' 'window_buf_1_3_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%window_buf_2_1_6 = load i8* %window_buf_2_1_5"   --->   Operation 52 'load' 'window_buf_2_1_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%window_buf_2_2_1 = load i8* %window_buf_2_2"   --->   Operation 53 'load' 'window_buf_2_2_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%window_buf_2_3_1 = load i8* %window_buf_2_3"   --->   Operation 54 'load' 'window_buf_2_3_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%window_buf_3_1_2 = load i8* %window_buf_3_1_1"   --->   Operation 55 'load' 'window_buf_3_1_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%window_buf_3_2_1 = load i8* %window_buf_3_2"   --->   Operation 56 'load' 'window_buf_3_2_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%window_buf_3_3_1 = load i8* %window_buf_3_3"   --->   Operation 57 'load' 'window_buf_3_3_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 58 [1/1] (0.00ns)   --->   "%window_buf_4_1_2 = load i8* %window_buf_4_1_1"   --->   Operation 58 'load' 'window_buf_4_1_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%window_buf_4_2_1 = load i8* %window_buf_4_2"   --->   Operation 59 'load' 'window_buf_4_2_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%window_buf_4_3_1 = load i8* %window_buf_4_3"   --->   Operation 60 'load' 'window_buf_4_3_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 512, i64 512, i64 512)"   --->   Operation 61 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "br i1 %tmp_66_i, label %.loopexit.loopexit, label %.preheader8.preheader.0.i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:203]   --->   Operation 62 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%window_buf_0_1_loa = load i8* %window_buf_0_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 63 'load' 'window_buf_0_1_loa' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.00ns)   --->   "%window_buf_3_1_loa = load i8* %window_buf_3_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 64 'load' 'window_buf_3_1_loa' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "%window_buf_4_1_loa = load i8* %window_buf_4_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 65 'load' 'window_buf_4_1_loa' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 66 [1/2] (3.25ns)   --->   "%line_buf_load = load i40* %line_buf_addr, align 8" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:216]   --->   Operation 66 'load' 'line_buf_load' <Predicate = (!tmp_66_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 40> <Depth = 512> <RAM>
+ST_4 : Operation 67 [1/1] (0.00ns)   --->   "%window_buf_0_4 = call i8 @_ssdm_op_PartSelect.i8.i40.i32.i32(i40 %line_buf_load, i32 8, i32 15)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:212]   --->   Operation 67 'partselect' 'window_buf_0_4' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 68 [1/1] (0.00ns)   --->   "%window_buf_1_4 = call i8 @_ssdm_op_PartSelect.i8.i40.i32.i32(i40 %line_buf_load, i32 16, i32 23)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:212]   --->   Operation 68 'partselect' 'window_buf_1_4' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%window_buf_2_4 = call i8 @_ssdm_op_PartSelect.i8.i40.i32.i32(i40 %line_buf_load, i32 24, i32 31)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:212]   --->   Operation 69 'partselect' 'window_buf_2_4' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 70 [1/1] (0.00ns)   --->   "%window_buf_3_4 = call i8 @_ssdm_op_PartSelect.i8.i40.i32.i32(i40 %line_buf_load, i32 32, i32 39)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:212]   --->   Operation 70 'partselect' 'window_buf_3_4' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 71 [1/1] (3.90ns)   --->   "%window_buf_4_4 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* @fifo1)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:216]   --->   Operation 71 'read' 'window_buf_4_4' <Predicate = (!tmp_66_i)> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_35_i = call i32 @_ssdm_op_PartSelect.i32.i40.i32.i32(i40 %line_buf_load, i32 8, i32 39)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:216]   --->   Operation 72 'partselect' 'tmp_35_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%tmp_36_i = call i40 @_ssdm_op_BitConcatenate.i40.i8.i32(i8 %window_buf_4_4, i32 %tmp_35_i)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:216]   --->   Operation 73 'bitconcatenate' 'tmp_36_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (3.25ns)   --->   "store i40 %tmp_36_i, i40* %line_buf_addr, align 8" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:216]   --->   Operation 74 'store' <Predicate = (!tmp_66_i)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 40> <Depth = 512> <RAM>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_109_0_cast_i = zext i8 %window_buf_0_1_loa to i11" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 75 'zext' 'tmp_109_0_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_110_0_1_i = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %window_buf_0_1_6, i2 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 76 'bitconcatenate' 'tmp_110_0_1_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%tmp_110_0_1_cast_i = zext i10 %tmp_110_0_1_i to i11" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 77 'zext' 'tmp_110_0_1_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (2.12ns)   --->   "%pix_gauss_2_0_1_i = add i11 %tmp_109_0_cast_i, %tmp_110_0_1_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 78 'add' 'pix_gauss_2_0_1_i' <Predicate = (!tmp_66_i)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%pix_gauss_2_0_1_cast = zext i11 %pix_gauss_2_0_1_i to i13" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 79 'zext' 'pix_gauss_2_0_1_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%p_shl2_i = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %window_buf_0_2_1, i3 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 80 'bitconcatenate' 'p_shl2_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%p_shl2_cast_i = zext i11 %p_shl2_i to i12" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 81 'zext' 'p_shl2_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%p_shl3_i = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %window_buf_0_2_1, i1 false)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 82 'bitconcatenate' 'p_shl3_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%p_shl3_cast_i = zext i9 %p_shl3_i to i12" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 83 'zext' 'p_shl3_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 84 [1/1] (2.12ns)   --->   "%tmp_110_0_2_i = sub i12 %p_shl2_cast_i, %p_shl3_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 84 'sub' 'tmp_110_0_2_i' <Predicate = (!tmp_66_i)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_110_0_2_cast_i = sext i12 %tmp_110_0_2_i to i13" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 85 'sext' 'tmp_110_0_2_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 86 [1/1] (2.13ns)   --->   "%pix_gauss_2_0_2_i = add i13 %pix_gauss_2_0_1_cast, %tmp_110_0_2_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 86 'add' 'pix_gauss_2_0_2_i' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_110_1_3_i = call i12 @_ssdm_op_BitConcatenate.i12.i8.i4(i8 %window_buf_1_3_1, i4 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 87 'bitconcatenate' 'tmp_110_1_3_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "%tmp_110_1_3_cast_i_c = zext i12 %tmp_110_1_3_i to i13" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 88 'zext' 'tmp_110_1_3_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_110_1_4_i = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %window_buf_1_4, i2 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 89 'bitconcatenate' 'tmp_110_1_4_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_110_1_4_cast_i_c = zext i10 %tmp_110_1_4_i to i11" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 90 'zext' 'tmp_110_1_4_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%p_shl13_i = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %window_buf_2_4, i3 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 91 'bitconcatenate' 'p_shl13_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (0.00ns)   --->   "%p_shl13_cast_i = zext i11 %p_shl13_i to i12" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 92 'zext' 'p_shl13_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%p_shl14_i = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %window_buf_2_4, i1 false)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 93 'bitconcatenate' 'p_shl14_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 94 [1/1] (0.00ns)   --->   "%p_shl14_cast_i = zext i9 %p_shl14_i to i12" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 94 'zext' 'p_shl14_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 95 [1/1] (2.12ns)   --->   "%tmp_110_2_4_i = sub i12 %p_shl13_cast_i, %p_shl14_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 95 'sub' 'tmp_110_2_4_i' <Predicate = (!tmp_66_i)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_110_2_4_cast_i_c = sext i12 %tmp_110_2_4_i to i13" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 96 'sext' 'tmp_110_2_4_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 97 [1/1] (0.00ns)   --->   "%tmp_110_3_i = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %window_buf_3_1_loa, i2 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 97 'bitconcatenate' 'tmp_110_3_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 98 [1/1] (0.00ns)   --->   "%tmp_110_3_cast_i_cas = zext i10 %tmp_110_3_i to i11" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 98 'zext' 'tmp_110_3_cast_i_cas' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 99 [1/1] (0.00ns)   --->   "%tmp_110_3_1_i = call i12 @_ssdm_op_BitConcatenate.i12.i8.i4(i8 %window_buf_3_1_2, i4 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 99 'bitconcatenate' 'tmp_110_3_1_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 100 [1/1] (0.00ns)   --->   "%tmp_110_3_1_cast_i_c = zext i12 %tmp_110_3_1_i to i13" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 100 'zext' 'tmp_110_3_1_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_110_3_3_i = call i12 @_ssdm_op_BitConcatenate.i12.i8.i4(i8 %window_buf_3_3_1, i4 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 101 'bitconcatenate' 'tmp_110_3_3_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_110_3_3_cast_i_c = zext i12 %tmp_110_3_3_i to i13" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 102 'zext' 'tmp_110_3_3_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_110_3_4_i = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %window_buf_3_4, i2 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 103 'bitconcatenate' 'tmp_110_3_4_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_110_3_4_cast_i_c = zext i10 %tmp_110_3_4_i to i11" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 104 'zext' 'tmp_110_3_4_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_109_4_cast_i_cas = zext i8 %window_buf_4_1_loa to i9" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 105 'zext' 'tmp_109_4_cast_i_cas' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_110_4_1_i = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %window_buf_4_1_2, i2 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 106 'bitconcatenate' 'tmp_110_4_1_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_110_4_1_cast_i_c = zext i10 %tmp_110_4_1_i to i11" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 107 'zext' 'tmp_110_4_1_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 108 [1/1] (0.00ns)   --->   "%p_shl_i = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %window_buf_4_2_1, i3 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 108 'bitconcatenate' 'p_shl_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 109 [1/1] (0.00ns)   --->   "%p_shl_cast_i = zext i11 %p_shl_i to i12" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 109 'zext' 'p_shl_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 110 [1/1] (0.00ns)   --->   "%p_shl10_i = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %window_buf_4_2_1, i1 false)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 110 'bitconcatenate' 'p_shl10_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%p_shl10_cast_i = zext i9 %p_shl10_i to i12" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 111 'zext' 'p_shl10_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 112 [1/1] (2.12ns)   --->   "%tmp_110_4_2_i = sub i12 %p_shl_cast_i, %p_shl10_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 112 'sub' 'tmp_110_4_2_i' <Predicate = (!tmp_66_i)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 113 [1/1] (0.00ns)   --->   "%tmp_110_4_2_cast_i_c = sext i12 %tmp_110_4_2_i to i13" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 113 'sext' 'tmp_110_4_2_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 114 [1/1] (0.00ns)   --->   "%tmp_110_4_3_i = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %window_buf_4_3_1, i2 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 114 'bitconcatenate' 'tmp_110_4_3_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_110_4_3_cast_i_c = zext i10 %tmp_110_4_3_i to i11" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 115 'zext' 'tmp_110_4_3_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 116 [1/1] (0.00ns)   --->   "%tmp_109_4_4_cast_i_c = zext i8 %window_buf_4_4 to i9" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 116 'zext' 'tmp_109_4_4_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 117 [1/1] (2.13ns)   --->   "%tmp9 = add i13 %tmp_110_4_2_cast_i_c, %tmp_110_2_4_cast_i_c" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 117 'add' 'tmp9' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 118 [1/1] (2.13ns)   --->   "%tmp12 = add i13 %tmp_110_3_1_cast_i_c, %tmp_110_1_3_cast_i_c" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 118 'add' 'tmp12' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 119 [1/1] (2.12ns)   --->   "%tmp14 = add i11 %tmp_110_3_cast_i_cas, %tmp_110_1_4_cast_i_c" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 119 'add' 'tmp14' <Predicate = (!tmp_66_i)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 120 [1/1] (0.00ns)   --->   "%tmp14_cast = zext i11 %tmp14 to i13" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 120 'zext' 'tmp14_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 121 [1/1] (2.13ns)   --->   "%tmp13 = add i13 %tmp_110_3_3_cast_i_c, %tmp14_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 121 'add' 'tmp13' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 122 [1/1] (2.12ns)   --->   "%tmp16 = add i11 %tmp_110_4_1_cast_i_c, %tmp_110_3_4_cast_i_c" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 122 'add' 'tmp16' <Predicate = (!tmp_66_i)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 123 [1/1] (2.11ns)   --->   "%tmp18 = add i9 %tmp_109_4_4_cast_i_c, %tmp_109_4_cast_i_cas" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 123 'add' 'tmp18' <Predicate = (!tmp_66_i)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 124 [1/1] (0.00ns)   --->   "%tmp18_cast = zext i9 %tmp18 to i11" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 124 'zext' 'tmp18_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 125 [1/1] (2.12ns)   --->   "%tmp17 = add i11 %tmp_110_4_3_cast_i_c, %tmp18_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 125 'add' 'tmp17' <Predicate = (!tmp_66_i)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 126 [1/1] (0.00ns)   --->   "store i8 %window_buf_4_4, i8* %window_buf_4_3" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:227]   --->   Operation 126 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 127 [1/1] (0.00ns)   --->   "store i8 %window_buf_4_3_1, i8* %window_buf_4_2" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 127 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 128 [1/1] (0.00ns)   --->   "store i8 %window_buf_4_2_1, i8* %window_buf_4_1_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 128 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 129 [1/1] (0.00ns)   --->   "store i8 %window_buf_4_1_2, i8* %window_buf_4_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 129 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 130 [1/1] (0.00ns)   --->   "store i8 %window_buf_3_4, i8* %window_buf_3_3" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:227]   --->   Operation 130 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 131 [1/1] (0.00ns)   --->   "store i8 %window_buf_3_3_1, i8* %window_buf_3_2" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 131 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 132 [1/1] (0.00ns)   --->   "store i8 %window_buf_3_2_1, i8* %window_buf_3_1_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 132 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 133 [1/1] (0.00ns)   --->   "store i8 %window_buf_3_1_2, i8* %window_buf_3_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 133 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 134 [1/1] (0.00ns)   --->   "store i8 %window_buf_2_4, i8* %window_buf_2_3" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:227]   --->   Operation 134 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 135 [1/1] (0.00ns)   --->   "store i8 %window_buf_2_3_1, i8* %window_buf_2_2" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 135 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 136 [1/1] (0.00ns)   --->   "store i8 %window_buf_2_2_1, i8* %window_buf_2_1_5" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 136 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 137 [1/1] (0.00ns)   --->   "store i8 %window_buf_1_4, i8* %window_buf_1_3" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:227]   --->   Operation 137 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 138 [1/1] (0.00ns)   --->   "store i8 %window_buf_1_3_1, i8* %window_buf_1_2" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 138 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 139 [1/1] (0.00ns)   --->   "store i8 %window_buf_1_2_1, i8* %window_buf_1_1_5" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 139 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 140 [1/1] (0.00ns)   --->   "store i8 %window_buf_0_4, i8* %window_buf_0_3" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:227]   --->   Operation 140 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 141 [1/1] (0.00ns)   --->   "store i8 %window_buf_0_3_1, i8* %window_buf_0_2" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 141 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 142 [1/1] (0.00ns)   --->   "store i8 %window_buf_0_2_1, i8* %window_buf_0_1_5" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 142 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_4 : Operation 143 [1/1] (0.00ns)   --->   "store i8 %window_buf_0_1_6, i8* %window_buf_0_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 143 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 8.29>
+ST_5 : Operation 144 [1/1] (0.00ns)   --->   "%window_buf_1_1_loa = load i8* %window_buf_1_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 144 'load' 'window_buf_1_1_loa' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 145 [1/1] (0.00ns)   --->   "%window_buf_2_1_loa = load i8* %window_buf_2_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 145 'load' 'window_buf_2_1_loa' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 146 [1/1] (0.00ns)   --->   "%pix_gauss_2_0_2_cast = sext i13 %pix_gauss_2_0_2_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 146 'sext' 'pix_gauss_2_0_2_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_110_0_3_i = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %window_buf_0_3_1, i2 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 147 'bitconcatenate' 'tmp_110_0_3_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 148 [1/1] (0.00ns)   --->   "%tmp_110_0_3_cast_i = zext i10 %tmp_110_0_3_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 148 'zext' 'tmp_110_0_3_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_109_0_4_cast_i_c = zext i8 %window_buf_0_4 to i11" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 149 'zext' 'tmp_109_0_4_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 150 [1/1] (0.00ns)   --->   "%tmp_110_1_i = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %window_buf_1_1_loa, i2 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 150 'bitconcatenate' 'tmp_110_1_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 151 [1/1] (0.00ns)   --->   "%tmp_110_1_cast_i_cas = zext i10 %tmp_110_1_i to i11" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 151 'zext' 'tmp_110_1_cast_i_cas' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 152 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp = add i14 %tmp_110_0_3_cast_i, %pix_gauss_2_0_2_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 152 'add' 'tmp' <Predicate = (!tmp_66_i)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 153 [1/1] (2.12ns)   --->   "%tmp1 = add i11 %tmp_109_0_4_cast_i_c, %tmp_110_1_cast_i_cas" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 153 'add' 'tmp1' <Predicate = (!tmp_66_i)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 154 [1/1] (0.00ns)   --->   "%tmp1_cast = zext i11 %tmp1 to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 154 'zext' 'tmp1_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 155 [1/1] (3.94ns) (root node of TernaryAdder)   --->   "%pix_gauss_2_1_i = add i14 %tmp, %tmp1_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 155 'add' 'pix_gauss_2_1_i' <Predicate = (!tmp_66_i)> <Delay = 3.94> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 156 [1/1] (0.00ns)   --->   "%pix_gauss_2_1_cast_i = sext i14 %pix_gauss_2_1_i to i15" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 156 'sext' 'pix_gauss_2_1_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 157 [1/1] (0.00ns)   --->   "%tmp_110_1_1_i = call i12 @_ssdm_op_BitConcatenate.i12.i8.i4(i8 %window_buf_1_1_6, i4 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 157 'bitconcatenate' 'tmp_110_1_1_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 158 [1/1] (0.00ns)   --->   "%tmp_110_1_1_cast_i = zext i12 %tmp_110_1_1_i to i15" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 158 'zext' 'tmp_110_1_1_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 159 [1/1] (2.13ns)   --->   "%pix_gauss_2_1_1_i = add i15 %tmp_110_1_1_cast_i, %pix_gauss_2_1_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 159 'add' 'pix_gauss_2_1_1_i' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 160 [1/1] (0.00ns)   --->   "%p_shl4_i = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %window_buf_1_2_1, i5 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 160 'bitconcatenate' 'p_shl4_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 161 [1/1] (0.00ns)   --->   "%p_shl4_cast_i = zext i13 %p_shl4_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 161 'zext' 'p_shl4_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 162 [1/1] (0.00ns)   --->   "%p_shl5_i = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %window_buf_1_2_1, i3 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 162 'bitconcatenate' 'p_shl5_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 163 [1/1] (0.00ns)   --->   "%p_shl5_cast_i = zext i11 %p_shl5_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 163 'zext' 'p_shl5_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 164 [1/1] (2.13ns)   --->   "%tmp_110_1_2_i = sub i14 %p_shl4_cast_i, %p_shl5_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 164 'sub' 'tmp_110_1_2_i' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 165 [1/1] (0.00ns)   --->   "%p_shl6_i = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %window_buf_2_1_loa, i3 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 165 'bitconcatenate' 'p_shl6_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 166 [1/1] (0.00ns)   --->   "%p_shl6_cast_i = zext i11 %p_shl6_i to i12" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 166 'zext' 'p_shl6_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 167 [1/1] (0.00ns)   --->   "%p_shl7_i = call i9 @_ssdm_op_BitConcatenate.i9.i8.i1(i8 %window_buf_2_1_loa, i1 false)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 167 'bitconcatenate' 'p_shl7_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 168 [1/1] (0.00ns)   --->   "%p_shl7_cast_i = zext i9 %p_shl7_i to i12" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 168 'zext' 'p_shl7_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 169 [1/1] (2.12ns)   --->   "%tmp_110_2_i = sub i12 %p_shl6_cast_i, %p_shl7_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 169 'sub' 'tmp_110_2_i' <Predicate = (!tmp_66_i)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 170 [1/1] (0.00ns)   --->   "%tmp_110_2_cast_i_cas = sext i12 %tmp_110_2_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 170 'sext' 'tmp_110_2_cast_i_cas' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 171 [1/1] (0.00ns)   --->   "%p_shl8_i = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %window_buf_2_1_6, i5 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 171 'bitconcatenate' 'p_shl8_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 172 [1/1] (0.00ns)   --->   "%p_shl8_cast_i = zext i13 %p_shl8_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 172 'zext' 'p_shl8_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 173 [1/1] (0.00ns)   --->   "%p_shl9_i = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %window_buf_2_1_6, i3 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 173 'bitconcatenate' 'p_shl9_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 174 [1/1] (0.00ns)   --->   "%p_shl9_cast_i = zext i11 %p_shl9_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 174 'zext' 'p_shl9_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 175 [1/1] (2.13ns)   --->   "%tmp_110_2_1_i = sub i14 %p_shl8_cast_i, %p_shl9_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 175 'sub' 'tmp_110_2_1_i' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 176 [1/1] (0.00ns)   --->   "%tmp_110_2_1_cast_i_c = sext i14 %tmp_110_2_1_i to i15" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 176 'sext' 'tmp_110_2_1_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 177 [1/1] (0.00ns)   --->   "%p_shl17_i = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %window_buf_2_2_1, i5 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 177 'bitconcatenate' 'p_shl17_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 178 [1/1] (0.00ns)   --->   "%p_shl17_cast_i = zext i13 %p_shl17_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 178 'zext' 'p_shl17_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 179 [1/1] (0.00ns)   --->   "%p_shl18_i = call i10 @_ssdm_op_BitConcatenate.i10.i8.i2(i8 %window_buf_2_2_1, i2 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 179 'bitconcatenate' 'p_shl18_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 180 [1/1] (0.00ns)   --->   "%p_shl18_cast_i = zext i10 %p_shl18_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 180 'zext' 'p_shl18_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 181 [1/1] (2.13ns)   --->   "%tmp_110_2_2_i = add i14 %p_shl18_cast_i, %p_shl17_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 181 'add' 'tmp_110_2_2_i' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 182 [1/1] (0.00ns)   --->   "%tmp_110_2_2_cast_i = zext i14 %tmp_110_2_2_i to i16" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 182 'zext' 'tmp_110_2_2_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 183 [1/1] (0.00ns)   --->   "%p_shl15_i = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %window_buf_2_3_1, i5 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 183 'bitconcatenate' 'p_shl15_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 184 [1/1] (0.00ns)   --->   "%p_shl15_cast_i = zext i13 %p_shl15_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 184 'zext' 'p_shl15_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 185 [1/1] (0.00ns)   --->   "%p_shl16_i = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %window_buf_2_3_1, i3 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 185 'bitconcatenate' 'p_shl16_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 186 [1/1] (0.00ns)   --->   "%p_shl16_cast_i = zext i11 %p_shl16_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 186 'zext' 'p_shl16_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 187 [1/1] (2.13ns)   --->   "%tmp_110_2_3_i = sub i14 %p_shl15_cast_i, %p_shl16_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 187 'sub' 'tmp_110_2_3_i' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 188 [1/1] (0.00ns)   --->   "%tmp_110_2_3_cast_i_c = sext i14 %tmp_110_2_3_i to i15" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 188 'sext' 'tmp_110_2_3_cast_i_c' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 189 [1/1] (0.00ns)   --->   "%p_shl11_i = call i13 @_ssdm_op_BitConcatenate.i13.i8.i5(i8 %window_buf_3_2_1, i5 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 189 'bitconcatenate' 'p_shl11_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 190 [1/1] (0.00ns)   --->   "%p_shl11_cast_i = zext i13 %p_shl11_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 190 'zext' 'p_shl11_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 191 [1/1] (0.00ns)   --->   "%p_shl12_i = call i11 @_ssdm_op_BitConcatenate.i11.i8.i3(i8 %window_buf_3_2_1, i3 0)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 191 'bitconcatenate' 'p_shl12_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 192 [1/1] (0.00ns)   --->   "%p_shl12_cast_i = zext i11 %p_shl12_i to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 192 'zext' 'p_shl12_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 193 [1/1] (2.13ns)   --->   "%tmp_110_3_2_i = sub i14 %p_shl11_cast_i, %p_shl12_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 193 'sub' 'tmp_110_3_2_i' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 194 [1/1] (0.00ns)   --->   "%tmp_110_3_2_cast_i = sext i14 %tmp_110_3_2_i to i16" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 194 'sext' 'tmp_110_3_2_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 195 [1/1] (2.13ns)   --->   "%tmp5 = add i15 %tmp_110_2_3_cast_i_c, %tmp_110_2_1_cast_i_c" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 195 'add' 'tmp5' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 196 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp7 = add i16 %tmp_110_2_2_cast_i, %tmp_110_3_2_cast_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 196 'add' 'tmp7' <Predicate = (!tmp_66_i)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 197 [1/1] (0.00ns)   --->   "%tmp9_cast = sext i13 %tmp9 to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 197 'sext' 'tmp9_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 198 [1/1] (2.13ns)   --->   "%tmp8 = add i14 %tmp_110_2_cast_i_cas, %tmp9_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 198 'add' 'tmp8' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 199 [1/1] (0.00ns)   --->   "%tmp8_cast = sext i14 %tmp8 to i16" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 199 'sext' 'tmp8_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 200 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%tmp6 = add i16 %tmp7, %tmp8_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 200 'add' 'tmp6' <Predicate = (!tmp_66_i)> <Delay = 4.03> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 201 [1/1] (0.00ns)   --->   "%tmp12_cast = zext i13 %tmp12 to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 201 'zext' 'tmp12_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 202 [1/1] (0.00ns)   --->   "%tmp13_cast = zext i13 %tmp13 to i14" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 202 'zext' 'tmp13_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 203 [1/1] (2.13ns)   --->   "%tmp11 = add i14 %tmp12_cast, %tmp13_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 203 'add' 'tmp11' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 204 [1/1] (0.00ns)   --->   "%tmp11_cast = zext i14 %tmp11 to i15" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 204 'zext' 'tmp11_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 205 [1/1] (0.00ns)   --->   "%tmp16_cast = zext i11 %tmp16 to i12" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 205 'zext' 'tmp16_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 206 [1/1] (0.00ns)   --->   "%tmp17_cast = zext i11 %tmp17 to i12" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 206 'zext' 'tmp17_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 207 [1/1] (2.12ns)   --->   "%tmp15 = add i12 %tmp16_cast, %tmp17_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 207 'add' 'tmp15' <Predicate = (!tmp_66_i)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 208 [1/1] (0.00ns)   --->   "%tmp15_cast = zext i12 %tmp15 to i15" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 208 'zext' 'tmp15_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 209 [1/1] (2.13ns)   --->   "%tmp10 = add i15 %tmp11_cast, %tmp15_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 209 'add' 'tmp10' <Predicate = (!tmp_66_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 210 [1/1] (0.00ns)   --->   "store i8 %window_buf_2_1_6, i8* %window_buf_2_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 210 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_5 : Operation 211 [1/1] (0.00ns)   --->   "store i8 %window_buf_1_1_6, i8* %window_buf_1_1" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:221]   --->   Operation 211 'store' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 8.07>
+ST_6 : Operation 212 [1/1] (0.00ns)   --->   "%pix_gauss_2_1_1_cast = sext i15 %pix_gauss_2_1_1_i to i16" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 212 'sext' 'pix_gauss_2_1_1_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_6 : Operation 213 [1/1] (0.00ns)   --->   "%tmp_110_1_2_cast_i = sext i14 %tmp_110_1_2_i to i16" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 213 'sext' 'tmp_110_1_2_cast_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_6 : Operation 214 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp4 = add i16 %tmp_110_1_2_cast_i, %pix_gauss_2_1_1_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 214 'add' 'tmp4' <Predicate = (!tmp_66_i)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 215 [1/1] (0.00ns)   --->   "%tmp5_cast = sext i15 %tmp5 to i16" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 215 'sext' 'tmp5_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_6 : Operation 216 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%tmp3 = add i16 %tmp4, %tmp5_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 216 'add' 'tmp3' <Predicate = (!tmp_66_i)> <Delay = 4.03> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 217 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp2 = add i16 %tmp3, %tmp6" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 217 'add' 'tmp2' <Predicate = (!tmp_66_i)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 218 [1/1] (0.00ns)   --->   "%tmp10_cast = zext i15 %tmp10 to i16" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 218 'zext' 'tmp10_cast' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_6 : Operation 219 [1/1] (4.03ns) (root node of TernaryAdder)   --->   "%pix_gauss_2_4_4_i = add i16 %tmp2, %tmp10_cast" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:234]   --->   Operation 219 'add' 'pix_gauss_2_4_4_i' <Predicate = (!tmp_66_i)> <Delay = 4.03> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.01> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 220 [1/1] (0.00ns)   --->   "%tmp_71_i = call i8 @_ssdm_op_PartSelect.i8.i16.i32.i32(i16 %pix_gauss_2_4_4_i, i32 8, i32 15)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:242]   --->   Operation 220 'partselect' 'tmp_71_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 3.90>
+ST_7 : Operation 221 [1/1] (0.00ns)   --->   "%tmp_34_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str14)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:203]   --->   Operation 221 'specregionbegin' 'tmp_34_i' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_7 : Operation 222 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:204]   --->   Operation 222 'specpipeline' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_7 : Operation 223 [1/1] (3.90ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* @fifo2, i8 %tmp_71_i)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:242]   --->   Operation 223 'write' <Predicate = (!tmp_66_i)> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_7 : Operation 224 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str14, i32 %tmp_34_i)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:243]   --->   Operation 224 'specregionend' 'empty' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+ST_7 : Operation 225 [1/1] (0.00ns)   --->   "br label %.preheader9.i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:203]   --->   Operation 225 'br' <Predicate = (!tmp_66_i)> <Delay = 0.00>
+
+State 8 <SV = 4> <Delay = 0.00>
+ST_8 : Operation 226 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 226 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('yi') with incoming values : ('yi', HLS-canny-edge-detection-master/src/HlsImProc.hpp:202) [28]  (1.66 ns)
+
+ <State 2>: 2.64ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_i', HLS-canny-edge-detection-master/src/HlsImProc.hpp:202) [29]  (1.7 ns)
+	blocking operation 0.942 ns on control path)
+
+ <State 3>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('xi') with incoming values : ('xi', HLS-canny-edge-detection-master/src/HlsImProc.hpp:203) [36]  (0 ns)
+	'getelementptr' operation ('line_buf_addr', HLS-canny-edge-detection-master/src/HlsImProc.hpp:212) [65]  (0 ns)
+	'load' operation ('line_buf_load', HLS-canny-edge-detection-master/src/HlsImProc.hpp:216) on array 'line_buf', HLS-canny-edge-detection-master/src/HlsImProc.hpp:190 [66]  (3.26 ns)
+
+ <State 4>: 8.15ns
+The critical path consists of the following:
+	fifo read on port 'fifo1' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:216) [71]  (3.91 ns)
+	'add' operation ('tmp18', HLS-canny-edge-detection-master/src/HlsImProc.hpp:234) [189]  (2.12 ns)
+	'add' operation ('tmp17', HLS-canny-edge-detection-master/src/HlsImProc.hpp:234) [191]  (2.12 ns)
+
+ <State 5>: 8.3ns
+The critical path consists of the following:
+	'load' operation ('window_buf_2_1_loa', HLS-canny-edge-detection-master/src/HlsImProc.hpp:234) on local variable 'window_buf[2][1]' [59]  (0 ns)
+	'sub' operation ('tmp_110_2_i', HLS-canny-edge-detection-master/src/HlsImProc.hpp:234) [116]  (2.13 ns)
+	'add' operation ('tmp8', HLS-canny-edge-detection-master/src/HlsImProc.hpp:234) [175]  (2.13 ns)
+	'add' operation ('tmp6', HLS-canny-edge-detection-master/src/HlsImProc.hpp:234) [177]  (4.04 ns)
+
+ <State 6>: 8.07ns
+The critical path consists of the following:
+	'add' operation ('tmp4', HLS-canny-edge-detection-master/src/HlsImProc.hpp:234) [168]  (0 ns)
+	'add' operation ('tmp3', HLS-canny-edge-detection-master/src/HlsImProc.hpp:234) [171]  (4.04 ns)
+	'add' operation ('tmp2', HLS-canny-edge-detection-master/src/HlsImProc.hpp:234) [178]  (0 ns)
+	'add' operation ('pix_gauss_2_4_4_i', HLS-canny-edge-detection-master/src/HlsImProc.hpp:234) [197]  (4.04 ns)
+
+ <State 7>: 3.91ns
+The critical path consists of the following:
+	fifo write on port 'fifo2' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:242) [199]  (3.91 ns)
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

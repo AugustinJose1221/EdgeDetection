@@ -1,0 +1,190 @@
+
+
+================================================================
+== Vivado HLS Report for 'GrayArray2AXIS'
+================================================================
+* Date:           Wed Jan  6 15:36:43 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        EdgeDetection
+* Solution:       solution1
+* Product family: aartix7
+* Target device:  xa7a12tcsg325-1q
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.908|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  264193|  264193|  264193|  264193|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+        |             |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |  264192|  264192|       516|          -|          -|   512|    no    |
+        | + Loop 1.1  |     513|     513|         3|          1|          1|   512|    yes   |
+        +-------------+--------+--------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!tmp_i)
+3 --> 
+	6  / (tmp_59_i)
+	4  / (!tmp_59_i)
+4 --> 
+	5  / true
+5 --> 
+	3  / true
+6 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* @fifo7, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str117, [1 x i8]* @p_str118, [1 x i8]* @p_str119, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str120, [1 x i8]* @p_str121)"   --->   Operation 7 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %axis_dst_V_data_V, i1* %axis_dst_V_user_V, i1* %axis_dst_V_last_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2, [1 x i8]* @p_str2, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str2, [1 x i8]* @p_str2) nounwind"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.66ns)   --->   "br label %.loopexit" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:157]   --->   Operation 9 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 2.77>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%yi_i = phi i10 [ 0, %entry ], [ %yi, %.loopexit.loopexit ]"   --->   Operation 10 'phi' 'yi_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%tmp = trunc i10 %yi_i to i9" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:157]   --->   Operation 11 'trunc' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (1.70ns)   --->   "%tmp_i = icmp eq i10 %yi_i, -512" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:157]   --->   Operation 12 'icmp' 'tmp_i' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 512, i64 512, i64 512)"   --->   Operation 13 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (2.12ns)   --->   "%yi = add i10 1, %yi_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:157]   --->   Operation 14 'add' 'yi' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %tmp_i, label %"GrayArray2AXIS<512u, 512u>.exit", label %.preheader.i.preheader" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:157]   --->   Operation 15 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (1.66ns)   --->   "br label %.preheader.i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:158]   --->   Operation 16 'br' <Predicate = (!tmp_i)> <Delay = 1.66>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 17 'ret' <Predicate = (tmp_i)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.77>
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "%xi_i = phi i10 [ %xi, %0 ], [ 0, %.preheader.i.preheader ]"   --->   Operation 18 'phi' 'xi_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_14 = trunc i10 %xi_i to i9" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:158]   --->   Operation 19 'trunc' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 20 [1/1] (1.70ns)   --->   "%tmp_59_i = icmp eq i10 %xi_i, -512" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:158]   --->   Operation 20 'icmp' 'tmp_59_i' <Predicate = true> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 512, i64 512, i64 512)"   --->   Operation 21 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 22 [1/1] (2.12ns)   --->   "%xi = add i10 1, %xi_i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:158]   --->   Operation 22 'add' 'xi' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.12> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "br i1 %tmp_59_i, label %.loopexit.loopexit, label %0" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:158]   --->   Operation 23 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns) (grouped into LUT with out node tmp_user_V)   --->   "%tmp_63_i = or i9 %tmp_14, %tmp" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:166]   --->   Operation 24 'or' 'tmp_63_i' <Predicate = (!tmp_59_i)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (1.58ns) (out node of the LUT)   --->   "%tmp_user_V = icmp eq i9 %tmp_63_i, 0" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:166]   --->   Operation 25 'icmp' 'tmp_user_V' <Predicate = (!tmp_59_i)> <Delay = 1.58> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 26 [1/1] (1.70ns)   --->   "%tmp_last_V = icmp eq i10 %xi_i, 511" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:173]   --->   Operation 26 'icmp' 'tmp_last_V' <Predicate = (!tmp_59_i)> <Delay = 1.70> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.70> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.90>
+ST_4 : Operation 27 [1/1] (3.90ns)   --->   "%fifo7_read = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* @fifo7)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:162]   --->   Operation 27 'read' 'fifo7_read' <Predicate = (!tmp_59_i)> <Delay = 3.90> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.90> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 2> <FIFO>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%axis_writer_data_V = call i24 @_ssdm_op_BitConcatenate.i24.i8.i8.i8(i8 %fifo7_read, i8 %fifo7_read, i8 %fifo7_read)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:163]   --->   Operation 28 'bitconcatenate' 'axis_writer_data_V' <Predicate = (!tmp_59_i)> <Delay = 0.00>
+ST_4 : Operation 29 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i24P.i1P.i1P(i24* %axis_dst_V_data_V, i1* %axis_dst_V_user_V, i1* %axis_dst_V_last_V, i24 %axis_writer_data_V, i1 %tmp_user_V, i1 %tmp_last_V)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:181]   --->   Operation 29 'write' <Predicate = (!tmp_59_i)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_29_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str7)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:158]   --->   Operation 30 'specregionbegin' 'tmp_29_i' <Predicate = (!tmp_59_i)> <Delay = 0.00>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:159]   --->   Operation 31 'specpipeline' <Predicate = (!tmp_59_i)> <Delay = 0.00>
+ST_5 : Operation 32 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i24P.i1P.i1P(i24* %axis_dst_V_data_V, i1* %axis_dst_V_user_V, i1* %axis_dst_V_last_V, i24 %axis_writer_data_V, i1 %tmp_user_V, i1 %tmp_last_V)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:181]   --->   Operation 32 'write' <Predicate = (!tmp_59_i)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_5 : Operation 33 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str7, i32 %tmp_29_i)" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:182]   --->   Operation 33 'specregionend' 'empty' <Predicate = (!tmp_59_i)> <Delay = 0.00>
+ST_5 : Operation 34 [1/1] (0.00ns)   --->   "br label %.preheader.i" [HLS-canny-edge-detection-master/src/HlsImProc.hpp:158]   --->   Operation 34 'br' <Predicate = (!tmp_59_i)> <Delay = 0.00>
+
+State 6 <SV = 3> <Delay = 0.00>
+ST_6 : Operation 35 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 35 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('yi') with incoming values : ('yi', HLS-canny-edge-detection-master/src/HlsImProc.hpp:157) [9]  (1.66 ns)
+
+ <State 2>: 2.77ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_i', HLS-canny-edge-detection-master/src/HlsImProc.hpp:157) [11]  (1.7 ns)
+	blocking operation 1.07 ns on control path)
+
+ <State 3>: 2.77ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_59_i', HLS-canny-edge-detection-master/src/HlsImProc.hpp:158) [20]  (1.7 ns)
+	blocking operation 1.07 ns on control path)
+
+ <State 4>: 3.91ns
+The critical path consists of the following:
+	fifo read on port 'fifo7' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:162) [27]  (3.91 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

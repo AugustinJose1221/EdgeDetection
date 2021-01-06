@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'AXIS2GrayArray76' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[141] ('phitmp1_cast_i_i_i', HLS-canny-edge-detection-master/src/HlsImProc.hpp:125) [140]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[141] ('tmp_75_i_i_i', HLS-canny-edge-detection-master/src/HlsImProc.hpp:125) [141]  (3.82 ns)&#xD;&#xA;&#x9;'add' operation of DSP[143] ('pix_gray', HLS-canny-edge-detection-master/src/HlsImProc.hpp:125) [143]  (3.82 ns)" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:39.221+0530" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (11ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:39.214+0530" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'Sobel&lt;512u, 512u>' to 'Sobel_512u_512u_s'." projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:37.274+0530" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'canny_edge_detection.1.1' to 'canny_edge_detection_1_1'." projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:37.229+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'canny_edge_detection.entry3' to 'canny_edge_detection.1.1' " projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:37.177+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::AXIS2GrayArray&lt;512u, 512u>76' to 'AXIS2GrayArray76' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:44:13)" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:36.514+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::GaussianBlur&lt;512u, 512u>' to 'GaussianBlur' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:190:41)" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:35.556+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::GrayArray2AXIS&lt;512u, 512u>' to 'GrayArray2AXIS' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:157:41)" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:35.520+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::HystThreshold&lt;512u, 512u>' to 'HystThreshold' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:75:41)" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:35.512+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::HystThresholdComp&lt;512u, 512u>' to 'HystThresholdComp' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:476:41)" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:35.504+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::NonMaxSuppression&lt;512u, 512u>' to 'NonMaxSuppression' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:368:41)" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:35.442+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::Sobel&lt;512u, 512u>' to 'Sobel&lt;512u, 512u>' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:6:41)" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:35.433+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hlsimproc::HlsImProc::ZeroPadding&lt;512u, 512u>' to 'ZeroPadding' (HLS-canny-edge-detection-master/src/HlsImProc.hpp:529:41)" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:35.409+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-124] Array  'fifo3.grad' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:34.150+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-124] Array  'fifo3.value' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:33.581+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-124] Array  'fifo1' : may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order." projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:33.543+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file HLS-canny-edge-detection-master/src/canny_edge_detection.cpp" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:23.065+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 214-113] Variables defined outside dataflow region are not supported: HLS-canny-edge-detection-master/src/canny_edge_detection.cpp:59:47" projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:36:03.916+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Skipped source file 'lenna.png'. Source files must have extensions .c, .C, .cc, .cpp, .c++, .cp, or .cxx." projectName="EdgeDetection" solutionName="solution1" date="2021-01-06T15:35:48.873+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
